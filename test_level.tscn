@@ -9,4 +9,4 @@
 position = Vector2(0, -1)
 
 [node name="TestHero" parent="." unique_id=1488862249 instance=ExtResource("2_f7g2b")]
-position = Vector2(486, 392)
+position = Vector2(488, 405)
