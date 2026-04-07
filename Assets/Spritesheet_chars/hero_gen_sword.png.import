@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://traesusjan1e"
-path="res://.godot/imported/roguelikeSheet_magenta.png-8b5a1bd2402a686e84ee58ef217ef439.ctex"
+uid="uid://d2ln1ywdrhaet"
+path="res://.godot/imported/hero_gen_sword.png-d34d57e37613be5c06a5a9d7bd53e981.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Spritesheet/roguelikeSheet_magenta.png"
-dest_files=["res://.godot/imported/roguelikeSheet_magenta.png-8b5a1bd2402a686e84ee58ef217ef439.ctex"]
+source_file="res://Assets/Spritesheet_chars/hero_gen_sword.png"
+dest_files=["res://.godot/imported/hero_gen_sword.png-d34d57e37613be5c06a5a9d7bd53e981.ctex"]
 
 [params]
 

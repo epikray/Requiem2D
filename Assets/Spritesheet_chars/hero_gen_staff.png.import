@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bylprh2qdv157"
-path="res://.godot/imported/roguelikeSheet_transparent.png-63af66d25266ee712e73f82819ca633d.ctex"
+uid="uid://bkuel6ugo8fh4"
+path="res://.godot/imported/hero_gen_staff.png-83bb4ce5ca54ad1fae0727a6595ce292.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Spritesheet/roguelikeSheet_transparent.png"
-dest_files=["res://.godot/imported/roguelikeSheet_transparent.png-63af66d25266ee712e73f82819ca633d.ctex"]
+source_file="res://Assets/Spritesheet_chars/hero_gen_staff.png"
+dest_files=["res://.godot/imported/hero_gen_staff.png-83bb4ce5ca54ad1fae0727a6595ce292.ctex"]
 
 [params]
 

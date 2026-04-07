@@ -1,6 +1,6 @@
 [gd_resource type="TileSet" format=3 uid="uid://b6o7du5ro5h7y"]
 
-[ext_resource type="Texture2D" uid="uid://bylprh2qdv157" path="res://Assets/Spritesheet/roguelikeSheet_transparent.png" id="1_jsamo"]
+[ext_resource type="Texture2D" path="res://Assets/Spritesheet/roguelikeSheet_transparent.png" id="1_jsamo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jgj0g"]
 resource_name = "Base"

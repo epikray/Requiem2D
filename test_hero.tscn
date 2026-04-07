@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://ipf6yhnifrf2"]
+
+[ext_resource type="Texture2D" uid="uid://d7pcjja0igt" path="res://Assets/Spritesheet_chars/hero_gen.png" id="1_k1v1a"]
+
+[node name="TestHero" type="Node2D" unique_id=1488862249]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=250036357]
+texture_filter = 1
+texture = ExtResource("1_k1v1a")
