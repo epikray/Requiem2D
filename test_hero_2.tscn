@@ -1,8 +1,7 @@
-[gd_scene format=3 uid="uid://ipf6yhnifrf2"]
+[gd_scene format=3 uid="uid://bytjkwqswwl50"]
 
-[ext_resource type="Texture2D" uid="uid://d7pcjja0igt" path="res://Assets/Spritesheet_chars/hero_gen.png" id="1_k1v1a"]
-[ext_resource type="Script" uid="uid://lg0j3c3aw4w0" path="res://test_hero.gd" id="1_svxex"]
-[ext_resource type="Script" uid="uid://cakywev8k6tjl" path="res://player_movement.gd" id="3_lw4ma"]
+[ext_resource type="Script" uid="uid://cakywev8k6tjl" path="res://player_movement.gd" id="1_cntea"]
+[ext_resource type="Texture2D" uid="uid://d7pcjja0igt" path="res://Assets/Spritesheet_chars/hero_gen.png" id="2_o1e0m"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_svxex"]
 
@@ -278,25 +277,20 @@ _data = {
 &"walk_right_blink": SubResource("Animation_ceykb")
 }
 
-[node name="TestHero" type="Node2D" unique_id=1488862249 node_paths=PackedStringArray("sprite", "spriteAnimPlayer")]
-script = ExtResource("1_svxex")
-sprite = NodePath("CharacterBody2D/Sprite2D")
-spriteAnimPlayer = NodePath("CharacterBody2D/Sprite2D/AnimationPlayer")
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1126827627]
+script = ExtResource("1_cntea")
+speed = 400.0
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1514334559]
-script = ExtResource("3_lw4ma")
-speed = 1e+17
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1249678782]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=168338777]
 shape = SubResource("CapsuleShape2D_svxex")
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=250036357]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1082518993]
 texture_filter = 1
-texture = ExtResource("1_k1v1a")
+texture = ExtResource("2_o1e0m")
 offset = Vector2(0, -5)
 hframes = 12
 vframes = 8
 frame = 12
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D/Sprite2D" unique_id=42832375]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D" unique_id=1101002652]
 libraries/ = SubResource("AnimationLibrary_g48wa")
