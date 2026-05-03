@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dpx3j23psfaml"]
+
+[ext_resource type="Script" uid="uid://d0an8wwudits2" path="res://Scenes/Levels/test_level.gd" id="1_2ytpj"]
+[ext_resource type="PackedScene" uid="uid://dub5mnj24ap5w" path="res://Scenes/Levels/LevelComps/test_stage.tscn" id="2_db73o"]
+[ext_resource type="PackedScene" uid="uid://dotubx5ytddyi" path="res://Scenes/Levels/LevelComps/test_terrain.tscn" id="3_npfmg"]
+
+[node name="TestLevel" type="Node2D" unique_id=1039029478]
+script = ExtResource("1_2ytpj")
+
+[node name="TestStage" parent="." unique_id=1586836765 instance=ExtResource("2_db73o")]
+
+[node name="TileMap" parent="." unique_id=1258981773 instance=ExtResource("3_npfmg")]

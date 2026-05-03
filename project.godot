@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Requiem2D"
-run/main_scene="uid://1lecpiegyrff"
+run/main_scene="uid://b0v38xikcnit"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Global="*uid://b42dhosicbq5h"
 
 [dotnet]
 

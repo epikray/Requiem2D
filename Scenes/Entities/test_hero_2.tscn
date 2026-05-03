@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bytjkwqswwl50"]
 
-[ext_resource type="Script" uid="uid://cakywev8k6tjl" path="res://player_movement.gd" id="1_cntea"]
+[ext_resource type="Script" uid="uid://cakywev8k6tjl" path="res://Scenes/Scripts/player_movement.gd" id="1_cntea"]
+[ext_resource type="Script" uid="uid://lg0j3c3aw4w0" path="res://Scenes/Scripts/player_interacter.gd" id="2_lde01"]
 [ext_resource type="Texture2D" uid="uid://d7pcjja0igt" path="res://Assets/Spritesheet_chars/hero_gen.png" id="2_o1e0m"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_svxex"]
@@ -283,6 +284,7 @@ speed = 400.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=168338777]
 shape = SubResource("CapsuleShape2D_svxex")
+script = ExtResource("2_lde01")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1082518993]
 texture_filter = 1
