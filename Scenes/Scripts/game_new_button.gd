@@ -12,5 +12,5 @@ func _process(delta: float) -> void:
 
 
 func _on_pressed() -> void:
-	Global.goto_scene("res://Scenes/Levels/test_field.tscn")
+	emit_signal("")
 	pass # Replace with function body.
