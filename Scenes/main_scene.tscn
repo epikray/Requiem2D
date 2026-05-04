@@ -7,3 +7,6 @@
 script = ExtResource("1_6l7je")
 
 [node name="MainMenu" parent="." unique_id=769091772 instance=ExtResource("1_52fb6")]
+unique_name_in_owner = true
+
+[connection signal="new_game_select" from="MainMenu" to="." method="_on_main_menu_new_game_select"]

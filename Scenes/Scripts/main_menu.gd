@@ -1,11 +1,12 @@
 extends CenterContainer
 
-@export var new_game_button : Button
-@export var load_game_button : Button
+var new_game_button : Button
+var load_game_button : Button
+
+signal new_game_select
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	connect("new_game_button.pressed", load_level)
 	pass # Replace with function body.
 
 
@@ -20,5 +21,5 @@ func load_level() -> void:
 # This shit is getting annoying. How do we connect signals and receivers to each other.
 # Is it even worth when it is going to only one 
 func _on_new_game_button_pressed() -> void:
-	
+	emit_signal("new_game_select")
 	pass # Replace with function body.

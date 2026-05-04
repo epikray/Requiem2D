@@ -26,6 +26,7 @@ func _load_level(level_path: String) -> void:
 	pass
 
 
-func _on_new_game_select() -> void:
+
+func _on_main_menu_new_game_select() -> void:
 	_load_level("res://Scenes/Levels/test_level.tscn")
-	pass
+	pass # Replace with function body.
