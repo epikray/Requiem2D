@@ -21,5 +21,6 @@ func load_level() -> void:
 # This shit is getting annoying. How do we connect signals and receivers to each other.
 # Is it even worth when it is going to only one 
 func _on_new_game_button_pressed() -> void:
-	emit_signal("new_game_select")
+	Global.main.change_2d_scene("res://Scenes/Levels/test_level.tscn")
+	Global.main.remove_gui_scene()
 	pass # Replace with function body.

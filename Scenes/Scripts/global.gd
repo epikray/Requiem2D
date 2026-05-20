@@ -1,5 +1,7 @@
 extends Node
 
+var main : MainScene
+
 var current_scene = null
 var current_level = null
 

@@ -1,6 +1,10 @@
 extends Node2D
 
 
+# Level script has the job of organizing whether the map or stage is shown
+
+var playerInStage : bool = false 
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
