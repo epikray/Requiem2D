@@ -1,12 +1,19 @@
 [gd_scene format=3 uid="uid://dpx3j23psfaml"]
 
-[ext_resource type="Script" uid="uid://d0an8wwudits2" path="res://Scenes/Levels/test_level.gd" id="1_2ytpj"]
+[ext_resource type="Script" uid="uid://d0an8wwudits2" path="res://Scenes/Levels/level.gd" id="1_2ytpj"]
 [ext_resource type="PackedScene" uid="uid://dub5mnj24ap5w" path="res://Scenes/Levels/LevelComps/test_stage.tscn" id="2_db73o"]
-[ext_resource type="PackedScene" uid="uid://dotubx5ytddyi" path="res://Scenes/Levels/LevelComps/test_terrain.tscn" id="3_npfmg"]
+[ext_resource type="PackedScene" uid="uid://1lecpiegyrff" path="res://Scenes/Levels/LevelComps/test_field.tscn" id="3_db73o"]
+[ext_resource type="PackedScene" uid="uid://bytjkwqswwl50" path="res://Scenes/Entities/test_hero_2.tscn" id="4_db73o"]
 
-[node name="TestLevel" type="Node2D" unique_id=1039029478]
+[node name="TestLevel" type="Node2D" unique_id=1039029478 node_paths=PackedStringArray("field", "stage")]
 script = ExtResource("1_2ytpj")
+field = NodePath("TestField")
+stage = NodePath("TestStage")
+
+[node name="TestField" parent="." unique_id=787950061 instance=ExtResource("3_db73o")]
 
 [node name="TestStage" parent="." unique_id=1586836765 instance=ExtResource("2_db73o")]
 
-[node name="TileMap" parent="." unique_id=1258981773 instance=ExtResource("3_npfmg")]
+[node name="TestHero" parent="." unique_id=1126827627 instance=ExtResource("4_db73o")]
+unique_name_in_owner = true
+position = Vector2(477, 416)

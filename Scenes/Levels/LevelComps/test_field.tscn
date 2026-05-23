@@ -1,11 +1,7 @@
 [gd_scene format=3 uid="uid://1lecpiegyrff"]
 
 [ext_resource type="PackedScene" uid="uid://dotubx5ytddyi" path="res://Scenes/Levels/LevelComps/test_terrain.tscn" id="1_1c2mv"]
-[ext_resource type="PackedScene" uid="uid://ipf6yhnifrf2" path="res://Scenes/Entities/test_hero.tscn" id="3_f7g2b"]
 
 [node name="TestField" type="Node2D" unique_id=787950061]
 
 [node name="TileMap" parent="." unique_id=1258981773 instance=ExtResource("1_1c2mv")]
-
-[node name="TestHero" parent="." unique_id=1488862249 instance=ExtResource("3_f7g2b")]
-position = Vector2(519, 407)

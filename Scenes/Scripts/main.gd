@@ -8,8 +8,8 @@ var curr_gui_scene : Control
 
 ###
 # Responsibilities: This classs handles scene changes
+# 	Other responsibilites my occur, but hopefully we find a way to delegate it to another component
 ###
-
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

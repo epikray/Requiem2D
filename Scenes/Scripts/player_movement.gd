@@ -4,6 +4,10 @@ enum MOVE_STATE {UP, DOWN, LEFT, RIGHT}
 
 @export var speed: float = 100
 
+signal DEBUG_enter_stage;
+signal DEBUG_exit_stage;
+var DEBUG_in_stage: bool = false;
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -15,9 +19,20 @@ func get_input():
 	velocity = speed * input_dir
 	pass
 	
+func DEBUG_kb_shortcuts() -> void:
+	if Input.is_physical_key_pressed(KEY_I) : 
+		DEBUG_enter_stage.emit()
+		print("enter_stage")
+		
+	if Input.is_physical_key_pressed(KEY_K) : 
+		DEBUG_exit_stage.emit()
+		print("exit_stage")
+		
+	pass
+	
 func _process(_delta: float) -> void:
 	get_input()
-	print("my velocity is ", velocity)
+	DEBUG_kb_shortcuts()
 	move_and_slide()
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
