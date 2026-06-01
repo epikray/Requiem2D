@@ -1,10 +1,23 @@
 [gd_scene format=3 uid="uid://demtldlqpbfdw"]
 
 [ext_resource type="Texture2D" uid="uid://bs8nbrp2hsatn" path="res://Assets/Spritesheet_monsters/DevSlimeEnemy.png" id="1_qaexs"]
+[ext_resource type="Script" uid="uid://dgy3er0hex8pn" path="res://Scenes/Entities/test_enemy.gd" id="1_ufnfn"]
 
-[node name="Node2D" type="Node2D" unique_id=1639166814]
+[sub_resource type="CircleShape2D" id="CircleShape2D_qaexs"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ufnfn"]
+radius = 54.0
+
+[node name="DebugSlime" type="CharacterBody2D" unique_id=28527835]
+script = ExtResource("1_ufnfn")
+
+[node name="BodyCollision" type="CollisionShape2D" parent="." unique_id=1384426209]
+shape = SubResource("CircleShape2D_qaexs")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=909604189]
 texture_filter = 1
-position = Vector2(-1, -1)
 texture = ExtResource("1_qaexs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1719797243]
+shape = SubResource("CircleShape2D_ufnfn")
+debug_color = Color(3.3210217e-06, 0.6419954, 0.3303319, 0.41960785)
