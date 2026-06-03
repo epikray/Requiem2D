@@ -1,9 +1,8 @@
 extends Node2D
 
-
 # Level script has the job of organizing whether the map or stage is shown
-@export var field : Node2D
-@export var stage : Node2D 
+@export var field : Field
+@export var stage : Stage 
 
 var player : CharacterBody2D
 
@@ -23,6 +22,13 @@ func _process(delta: float) -> void:
 
 # Switch from field to stage
 func _on_battle() -> void:
+	
+	var data : BattleData
+	data.player = player
+	#data.enemy = data_gathered_from_whoever_signaled_to_battle
+	
+	
+	stage.load_battle_data(data)
 	view_stage()
 	%TestHero.DEBUG_in_stage = true
 	pass

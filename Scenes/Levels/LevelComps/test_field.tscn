@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://1lecpiegyrff"]
 
 [ext_resource type="PackedScene" uid="uid://dotubx5ytddyi" path="res://Scenes/Levels/LevelComps/test_terrain.tscn" id="1_1c2mv"]
+[ext_resource type="Script" uid="uid://ctsimr8i7eyhk" path="res://Scenes/Levels/LevelComps/field.gd" id="1_ypbdo"]
 
 [node name="TestField" type="Node2D" unique_id=787950061]
+script = ExtResource("1_ypbdo")
 
 [node name="TileMap" parent="." unique_id=1258981773 instance=ExtResource("1_1c2mv")]
