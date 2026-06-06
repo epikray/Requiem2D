@@ -282,7 +282,7 @@ _data = {
 script = ExtResource("1_cntea")
 speed = 200.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=168338777]
+[node name="HeroCollisionShape" type="CollisionShape2D" parent="." unique_id=168338777]
 shape = SubResource("CapsuleShape2D_svxex")
 script = ExtResource("2_lde01")
 
