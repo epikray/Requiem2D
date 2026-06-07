@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dg2hu1xo0sct3"
+path="res://.godot/imported/sfx_exp_shortest_hard8.wav-5347fc344802aca5ca6f5a4d6df6a15f.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Essential SFX by Juhani Junkala/SFX/Explosions/Shortest/sfx_exp_shortest_hard8.wav"
+dest_files=["res://.godot/imported/sfx_exp_shortest_hard8.wav-5347fc344802aca5ca6f5a4d6df6a15f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

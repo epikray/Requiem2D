@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://4dhny2oreodt"
+path="res://.godot/imported/sfx_exp_long4.wav-a3cc29c1acd91aa7e469a1d906a9c908.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Essential SFX by Juhani Junkala/SFX/Explosions/Long/sfx_exp_long4.wav"
+dest_files=["res://.godot/imported/sfx_exp_long4.wav-a3cc29c1acd91aa7e469a1d906a9c908.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

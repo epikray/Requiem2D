@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://3tepc37flfvy"
+path="res://.godot/imported/sfx_damage_hit5.wav-f200b7addbe68bc8a7ed6cfdf78f38db.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Essential SFX by Juhani Junkala/SFX/General Sounds/Simple Damage Sounds/sfx_damage_hit5.wav"
+dest_files=["res://.godot/imported/sfx_damage_hit5.wav-f200b7addbe68bc8a7ed6cfdf78f38db.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

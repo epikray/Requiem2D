@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bq4cf0i1ap0b6"
+path="res://.godot/imported/sfx_sounds_damage3.wav-9ccb4f1b2041029e41594202d1976c6c.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Essential SFX by Juhani Junkala/SFX/General Sounds/Negative Sounds/sfx_sounds_damage3.wav"
+dest_files=["res://.godot/imported/sfx_sounds_damage3.wav-9ccb4f1b2041029e41594202d1976c6c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

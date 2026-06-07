@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://8c6ko16wkrw1"
+path="res://.godot/imported/sfx_wpn_laser9.wav-298ac38a2c5e7d20bf0f2ed8cab6e001.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Essential SFX by Juhani Junkala/SFX/Weapons/Lasers/sfx_wpn_laser9.wav"
+dest_files=["res://.godot/imported/sfx_wpn_laser9.wav-298ac38a2c5e7d20bf0f2ed8cab6e001.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

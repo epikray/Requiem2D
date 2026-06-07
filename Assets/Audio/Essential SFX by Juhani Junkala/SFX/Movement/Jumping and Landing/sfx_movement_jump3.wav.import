@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bui5cb8wpn2r3"
+path="res://.godot/imported/sfx_movement_jump3.wav-5142e0de8a95459118a56cec8cf7ee73.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Essential SFX by Juhani Junkala/SFX/Movement/Jumping and Landing/sfx_movement_jump3.wav"
+dest_files=["res://.godot/imported/sfx_movement_jump3.wav-5142e0de8a95459118a56cec8cf7ee73.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

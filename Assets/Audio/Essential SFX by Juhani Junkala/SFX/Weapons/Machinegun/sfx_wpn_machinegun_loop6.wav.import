@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bdg7at5a6v5cv"
+path="res://.godot/imported/sfx_wpn_machinegun_loop6.wav-38311b50844129ee78c344d520437cc4.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Essential SFX by Juhani Junkala/SFX/Weapons/Machinegun/sfx_wpn_machinegun_loop6.wav"
+dest_files=["res://.godot/imported/sfx_wpn_machinegun_loop6.wav-38311b50844129ee78c344d520437cc4.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

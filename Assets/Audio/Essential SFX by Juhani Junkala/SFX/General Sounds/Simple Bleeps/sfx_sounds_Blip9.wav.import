@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cesl86mfyl2gx"
+path="res://.godot/imported/sfx_sounds_Blip9.wav-a0778b0eca0ddcb75b8112d73bda2c5a.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Essential SFX by Juhani Junkala/SFX/General Sounds/Simple Bleeps/sfx_sounds_Blip9.wav"
+dest_files=["res://.godot/imported/sfx_sounds_Blip9.wav-a0778b0eca0ddcb75b8112d73bda2c5a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

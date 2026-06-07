@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ddulm7n7ffbou"
+path="res://.godot/imported/sfx_vehicle_helicopterloop3.wav-fe1a2e182114af17bc65081a2f4a3c70.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Essential SFX by Juhani Junkala/SFX/Movement/Vehicles/sfx_vehicle_helicopterloop3.wav"
+dest_files=["res://.godot/imported/sfx_vehicle_helicopterloop3.wav-fe1a2e182114af17bc65081a2f4a3c70.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

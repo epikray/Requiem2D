@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cxvo71gxrfyc2"
+path="res://.godot/imported/sfx_vehicle_carloop1.wav-1ba0bc3ae4ce17e1876b5fe425b0f41b.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Essential SFX by Juhani Junkala/SFX/Movement/Vehicles/sfx_vehicle_carloop1.wav"
+dest_files=["res://.godot/imported/sfx_vehicle_carloop1.wav-1ba0bc3ae4ce17e1876b5fe425b0f41b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

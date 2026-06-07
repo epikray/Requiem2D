@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d11tfi4tu1o24"
+path="res://.godot/imported/sfx_movement_stairs1a.wav-9dd09651718d36ce4e0d4a6cfa83112f.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Essential SFX by Juhani Junkala/SFX/Movement/Climbing Stairs/sfx_movement_stairs1a.wav"
+dest_files=["res://.godot/imported/sfx_movement_stairs1a.wav-9dd09651718d36ce4e0d4a6cfa83112f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

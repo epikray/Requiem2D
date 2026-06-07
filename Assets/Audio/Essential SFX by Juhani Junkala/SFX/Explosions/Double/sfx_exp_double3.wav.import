@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://by08hax18w8o5"
+path="res://.godot/imported/sfx_exp_double3.wav-df2171773f28b21f7aaf0ca0a7e005db.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Essential SFX by Juhani Junkala/SFX/Explosions/Double/sfx_exp_double3.wav"
+dest_files=["res://.godot/imported/sfx_exp_double3.wav-df2171773f28b21f7aaf0ca0a7e005db.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

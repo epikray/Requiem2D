@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dwnuv7gdnkhlt"
+path="res://.godot/imported/sfx_deathscream_android1.wav-421512aa16ad7bf26d654c9c8c993356.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Essential SFX by Juhani Junkala/SFX/Death Screams/Android/sfx_deathscream_android1.wav"
+dest_files=["res://.godot/imported/sfx_deathscream_android1.wav-421512aa16ad7bf26d654c9c8c993356.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

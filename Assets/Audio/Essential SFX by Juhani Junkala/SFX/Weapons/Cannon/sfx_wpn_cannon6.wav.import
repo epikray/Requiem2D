@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dod21o1cup3rr"
+path="res://.godot/imported/sfx_wpn_cannon6.wav-6bb7f575f802ce38a4b61afb2bd2a8f9.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Essential SFX by Juhani Junkala/SFX/Weapons/Cannon/sfx_wpn_cannon6.wav"
+dest_files=["res://.godot/imported/sfx_wpn_cannon6.wav-6bb7f575f802ce38a4b61afb2bd2a8f9.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

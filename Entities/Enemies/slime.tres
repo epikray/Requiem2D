@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="CharData" format=3 uid="uid://blu8ylvn6k725"]
+
+[ext_resource type="Script" uid="uid://c74rx366esm2m" path="res://Util/char_data.gd" id="1_dhsu8"]
+
+[resource]
+script = ExtResource("1_dhsu8")
+char_name = "Slime"
+metadata/_custom_type_script = "uid://c74rx366esm2m"

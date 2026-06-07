@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bvv7xy4r1f76l"
+path="res://.godot/imported/sfx_alarm_loop2.wav-545fe929c53028abc13b204fae0d5278.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Essential SFX by Juhani Junkala/SFX/General Sounds/Alarms/Alarms/sfx_alarm_loop2.wav"
+dest_files=["res://.godot/imported/sfx_alarm_loop2.wav-545fe929c53028abc13b204fae0d5278.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dub5mnj24ap5w"]
+
+[ext_resource type="Script" uid="uid://b6xoxxbgh3pot" path="res://Levels/Stages/stage.gd" id="1_rx61o"]
+[ext_resource type="Texture2D" uid="uid://dhvpiayxv0j8c" path="res://Assets/Backgrounds/a275.png" id="1_w0uf1"]
+
+[node name="TestStage" type="Node2D" unique_id=1586836765]
+script = ExtResource("1_rx61o")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1632606567]
+texture_filter = 1
+texture = ExtResource("1_w0uf1")
+
+[node name="PPlacement" type="Marker2D" parent="." unique_id=1644193527]
+position = Vector2(-67, 31)
+
+[node name="EPlacement" type="Marker2D" parent="." unique_id=807866059]
+position = Vector2(67, 31)

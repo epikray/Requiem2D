@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dgjwd1051u2h8"
+path="res://.godot/imported/sfx_exp_cluster7.wav-c34e92eb91894ed735561a9f3da0c782.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Essential SFX by Juhani Junkala/SFX/Explosions/Clusters/sfx_exp_cluster7.wav"
+dest_files=["res://.godot/imported/sfx_exp_cluster7.wav-c34e92eb91894ed735561a9f3da0c782.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

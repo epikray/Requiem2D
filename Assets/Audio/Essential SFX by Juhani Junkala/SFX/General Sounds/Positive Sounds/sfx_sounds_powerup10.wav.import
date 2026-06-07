@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bpdsdtx8i35j5"
+path="res://.godot/imported/sfx_sounds_powerup10.wav-2b900dab1a2f0adddfb88ed56c9beded.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Essential SFX by Juhani Junkala/SFX/General Sounds/Positive Sounds/sfx_sounds_powerup10.wav"
+dest_files=["res://.godot/imported/sfx_sounds_powerup10.wav-2b900dab1a2f0adddfb88ed56c9beded.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

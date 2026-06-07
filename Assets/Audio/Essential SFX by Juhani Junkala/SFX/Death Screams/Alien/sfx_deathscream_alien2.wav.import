@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://boono3x7q1wc"
+path="res://.godot/imported/sfx_deathscream_alien2.wav-826a4744e0e390922cf46833fdefc9e9.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Essential SFX by Juhani Junkala/SFX/Death Screams/Alien/sfx_deathscream_alien2.wav"
+dest_files=["res://.godot/imported/sfx_deathscream_alien2.wav-826a4744e0e390922cf46833fdefc9e9.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

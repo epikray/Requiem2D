@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bl2t2r7kvuubq"
+path="res://.godot/imported/sfx_sounds_falling4.wav-e33e84aebc2954c72a23c817ee885778.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Essential SFX by Juhani Junkala/SFX/Movement/Falling Sounds/sfx_sounds_falling4.wav"
+dest_files=["res://.godot/imported/sfx_sounds_falling4.wav-e33e84aebc2954c72a23c817ee885778.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

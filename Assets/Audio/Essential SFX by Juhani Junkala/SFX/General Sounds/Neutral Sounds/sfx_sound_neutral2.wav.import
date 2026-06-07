@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bht0i4u53s564"
+path="res://.godot/imported/sfx_sound_neutral2.wav-1767b95e4241f3d0a10e5e45a076afb9.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Essential SFX by Juhani Junkala/SFX/General Sounds/Neutral Sounds/sfx_sound_neutral2.wav"
+dest_files=["res://.godot/imported/sfx_sound_neutral2.wav-1767b95e4241f3d0a10e5e45a076afb9.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://nihk45h5vsu8"
+path="res://.godot/imported/sfx_sound_bling.wav-809baa9df4f6a8eba689fba8e48dfacf.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Essential SFX by Juhani Junkala/SFX/General Sounds/Weird Sounds/sfx_sound_bling.wav"
+dest_files=["res://.godot/imported/sfx_sound_bling.wav-809baa9df4f6a8eba689fba8e48dfacf.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

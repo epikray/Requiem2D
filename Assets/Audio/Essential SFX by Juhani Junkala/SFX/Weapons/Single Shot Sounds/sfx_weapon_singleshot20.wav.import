@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://j1xr6omh30mu"
+path="res://.godot/imported/sfx_weapon_singleshot20.wav-704821381f2c9535911f9b82760eb8b9.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Essential SFX by Juhani Junkala/SFX/Weapons/Single Shot Sounds/sfx_weapon_singleshot20.wav"
+dest_files=["res://.godot/imported/sfx_weapon_singleshot20.wav-704821381f2c9535911f9b82760eb8b9.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

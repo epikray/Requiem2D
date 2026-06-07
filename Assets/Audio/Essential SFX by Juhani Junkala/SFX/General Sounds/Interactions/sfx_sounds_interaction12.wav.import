@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bna3cclwf6g3t"
+path="res://.godot/imported/sfx_sounds_interaction12.wav-79fff946c64ec5c3d527bc9cb06fd3f3.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Essential SFX by Juhani Junkala/SFX/General Sounds/Interactions/sfx_sounds_interaction12.wav"
+dest_files=["res://.godot/imported/sfx_sounds_interaction12.wav-79fff946c64ec5c3d527bc9cb06fd3f3.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

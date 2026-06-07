@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://lq5bxbpi4m70"
+path="res://.godot/imported/sfx_sounds_impact13.wav-82da62f47f8bbe33fadbb701a52fa647.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Essential SFX by Juhani Junkala/SFX/General Sounds/Impacts/sfx_sounds_impact13.wav"
+dest_files=["res://.godot/imported/sfx_sounds_impact13.wav-82da62f47f8bbe33fadbb701a52fa647.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
