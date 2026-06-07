@@ -1,0 +1,3 @@
+Tileset by Kenney, https://www.kenney.nl/assets/tag:godot, under CC0
+Using Roguelike/RPG pack as dev textures. Will def want to change in the future to the more FF style.
+
