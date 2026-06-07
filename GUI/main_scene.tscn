@@ -2,9 +2,6 @@
 
 [ext_resource type="Script" uid="uid://bdndyhjjyv8ur" path="res://Util/main.gd" id="1_6l7je"]
 [ext_resource type="PackedScene" uid="uid://dypg2fqho764r" path="res://GUI/main_menu.tscn" id="1_52fb6"]
-[ext_resource type="Script" uid="uid://bhljy7h2hvpbg" path="res://GUI/data.gd" id="3_kf7gx"]
-[ext_resource type="Resource" uid="uid://bxrhcnkyhgxng" path="res://Entities/Player/Test_Hero/axel.tres" id="4_071vw"]
-[ext_resource type="Resource" uid="uid://blu8ylvn6k725" path="res://Entities/Enemies/slime.tres" id="5_071vw"]
 
 [node name="MainScene" type="Node" unique_id=1648539419 node_paths=PackedStringArray("world_2d", "gui")]
 script = ExtResource("1_6l7je")
@@ -22,10 +19,5 @@ offset_bottom = 40.0
 [node name="MainMenu" parent="GUI" unique_id=769091772 instance=ExtResource("1_52fb6")]
 unique_name_in_owner = true
 layout_mode = 0
-
-[node name="Data" type="Node" parent="." unique_id=1565636211]
-script = ExtResource("3_kf7gx")
-PlayerData = ExtResource("4_071vw")
-SlimeData = ExtResource("5_071vw")
 
 [connection signal="new_game_select" from="GUI/MainMenu" to="." method="_on_main_menu_new_game_select"]

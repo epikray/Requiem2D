@@ -2,7 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://b6o7du5ro5h7y" path="res://Levels/base.tres" id="1_jgj0g"]
 
-[node name="TileMap" type="Node2D" unique_id=1258981773]
+[node name="TestTileMap" type="Node2D" unique_id=1258981773]
 texture_filter = 1
 
 [node name="WaterLayer" type="TileMapLayer" parent="." unique_id=713890131]
