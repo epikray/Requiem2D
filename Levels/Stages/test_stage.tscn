@@ -15,3 +15,7 @@ position = Vector2(-67, 31)
 
 [node name="EPlacement" type="Marker2D" parent="." unique_id=807866059]
 position = Vector2(67, 31)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1568841853]
+rotation = 1.3089969
+zoom = Vector2(3, 3)

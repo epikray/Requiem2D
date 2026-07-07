@@ -24,7 +24,7 @@ func _process(delta: float) -> void:
 func _on_battle() -> void:
 	
 	var data : BattleData
-	data.player = player
+	#data.player = player
 	#data.enemy = data_gathered_from_whoever_signaled_to_battle
 	
 	

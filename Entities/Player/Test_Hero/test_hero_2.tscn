@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://c74rx366esm2m" path="res://Util/char_data.gd" id="2_c5yfw"]
 [ext_resource type="Script" uid="uid://lg0j3c3aw4w0" path="res://Entities/Player/player_interacter.gd" id="2_lde01"]
 [ext_resource type="Texture2D" uid="uid://d7pcjja0igt" path="res://Assets/Spritesheet_chars/hero_gen.png" id="2_o1e0m"]
+[ext_resource type="Script" uid="uid://bm1c250d30gwc" path="res://Entities/Player/Test_Hero/camera_toggler.gd" id="5_p7787"]
 
 [sub_resource type="Resource" id="Resource_etvdl"]
 script = ExtResource("2_c5yfw")
@@ -306,3 +307,4 @@ libraries/ = SubResource("AnimationLibrary_g48wa")
 
 [node name="PlayerCamera" type="Camera2D" parent="." unique_id=598164633]
 zoom = Vector2(2, 2)
+script = ExtResource("5_p7787")
