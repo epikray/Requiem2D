@@ -1,6 +1,7 @@
 extends Node2D
 
 # Level script has the job of organizing whether the map or stage is shown
+# Im tripping up on this being the general *level* node, but then im always using 
 @export var field : Field
 @export var stage : Stage 
 

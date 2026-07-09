@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://dypg2fqho764r"]
 
-[ext_resource type="Script" path="res://Util/game_new_button.gd" id="1_28flt"]
 [ext_resource type="Script" uid="uid://dcntk8d80lvxc" path="res://GUI/main_menu.gd" id="1_48xlc"]
 
 [node name="MainMenu" type="CenterContainer" unique_id=769091772]
@@ -14,7 +13,6 @@ layout_mode = 2
 [node name="NewGameButton" type="Button" parent="VBoxContainer" unique_id=393677256]
 layout_mode = 2
 text = "New Game"
-script = ExtResource("1_28flt")
 
 [node name="LoadGameButton" type="Button" parent="VBoxContainer" unique_id=1725347117]
 layout_mode = 2
