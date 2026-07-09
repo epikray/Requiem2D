@@ -5,6 +5,10 @@ extends Node2D
 @export var field : Field
 @export var stage : Stage 
 
+# NOTE: How we are moving to set things up is leading to all entities that can exist on stage 
+# and in the field having a corresponding entity in each context. 
+# For now we make a condition that either the field or stage are active, and therefore only one of
+# the entities can be active. (WAAAY) Later we want both to be 'active', but only one is controlled.
 var player : CharacterBody2D
 
 var playerActiveInStage : bool = false 

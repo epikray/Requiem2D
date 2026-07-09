@@ -1,11 +1,14 @@
 class_name Stage
 extends Node2D
 
+# This might remain a terrain. Untill world state can change tiles or tiles layers, scary...
+@export var terrain : Node2D
+
+# TODO: Future entity controller or something
+@export var entities : Node2D
+
 var battleData : BattleData
-@export var camera : Camera2D
-
 var Enemies : Array[Node2D]
-
 var player : Node2D
 
 # Called when the node enters the scene tree for the first time.
@@ -19,7 +22,6 @@ func _process(delta: float) -> void:
 func set_primary(enabled: bool) -> void:
 	visible = enabled
 	set_process(enabled)
-	camera.enabled = enabled
 	pass
 	
 	

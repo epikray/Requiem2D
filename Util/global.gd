@@ -16,3 +16,8 @@ func set_data(s :DataScene) -> void:
 	if data == null:
 		data = s
 pass
+
+func get_player() -> Node2D:
+		
+	
+pass

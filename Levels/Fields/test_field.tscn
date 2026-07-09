@@ -2,10 +2,20 @@
 
 [ext_resource type="PackedScene" uid="uid://dotubx5ytddyi" path="res://Levels/Fields/test_terrain.tscn" id="1_1c2mv"]
 [ext_resource type="Script" uid="uid://ctsimr8i7eyhk" path="res://Levels/Fields/field.gd" id="1_ypbdo"]
+[ext_resource type="PackedScene" uid="uid://bytjkwqswwl50" path="res://Entities/Player/Test_Hero/test_hero_2.tscn" id="3_r7s42"]
+[ext_resource type="PackedScene" uid="uid://demtldlqpbfdw" path="res://Entities/Enemies/test_enemy.tscn" id="4_iljfm"]
 
-[node name="TestField" type="Node2D" unique_id=787950061]
+[node name="TestField" type="Node2D" unique_id=787950061 node_paths=PackedStringArray("terrain", "entities")]
 script = ExtResource("1_ypbdo")
+terrain = NodePath("TestTileMap")
+entities = NodePath("Entities")
 
 [node name="TestTileMap" parent="." unique_id=1258981773 instance=ExtResource("1_1c2mv")]
 
 [node name="Entities" type="Node2D" parent="." unique_id=268200466]
+
+[node name="TestHero" parent="Entities" unique_id=1126827627 instance=ExtResource("3_r7s42")]
+position = Vector2(462, 417)
+
+[node name="DebugSlime" parent="Entities" unique_id=28527835 instance=ExtResource("4_iljfm")]
+position = Vector2(667, 417)
