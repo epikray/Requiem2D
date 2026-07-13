@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var controller : CharController
+@export var controller : FCharController
 @export var view : CharView
 
 @export var data: CharData

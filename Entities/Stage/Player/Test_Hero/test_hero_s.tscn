@@ -1,16 +1,21 @@
 [gd_scene format=3 uid="uid://bea8k8xxi5cgm"]
 
-[ext_resource type="Script" uid="uid://j5d4p7o8m5fg" path="res://Entities/Stage/Player/Test_Hero/player_char_s.gd" id="1_a6m4k"]
+[ext_resource type="Script" uid="uid://cogbef5qtsoe6" path="res://Entities/EntityComponents/stage_char.gd" id="1_b5xxd"]
 [ext_resource type="Texture2D" uid="uid://d2ln1ywdrhaet" path="res://Assets/Spritesheet_chars/hero_gen_sword.png" id="1_fpa7l"]
+[ext_resource type="Script" uid="uid://c616inraeljtg" path="res://Entities/EntityComponents/char_view.gd" id="2_yrxtc"]
 
 [node name="TestHeroS" type="Node2D" unique_id=1365503991]
-script = ExtResource("1_a6m4k")
+script = ExtResource("1_b5xxd")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1634325119]
+[node name="CharView" type="Node2D" parent="." unique_id=2113519688]
+script = ExtResource("2_yrxtc")
+metadata/_custom_type_script = "uid://c616inraeljtg"
+
+[node name="Sprite2D" type="Sprite2D" parent="CharView" unique_id=1634325119]
 texture_filter = 1
 texture = ExtResource("1_fpa7l")
 hframes = 12
 vframes = 8
 frame = 19
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D" unique_id=1870223728]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CharView/Sprite2D" unique_id=1870223728]

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dv1jumgt8apu1" path="res://Entities/EntityComponents/field_char.gd" id="1_fvuw7"]
 [ext_resource type="Script" uid="uid://c616inraeljtg" path="res://Entities/EntityComponents/char_view.gd" id="1_ulnwp"]
-[ext_resource type="Script" uid="uid://db1jc8nm3r4a2" path="res://Entities/EntityComponents/char_controller_p.gd" id="2_fvuw7"]
+[ext_resource type="Script" uid="uid://db1jc8nm3r4a2" path="res://Entities/EntityComponents/fchar_controller_p.gd" id="2_fvuw7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mqgk0"]
 

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dv1jumgt8apu1" path="res://Entities/EntityComponents/field_char.gd" id="1_3165l"]
 [ext_resource type="Script" uid="uid://c74rx366esm2m" path="res://Util/char_data.gd" id="2_6s1ou"]
-[ext_resource type="Script" uid="uid://db1jc8nm3r4a2" path="res://Entities/EntityComponents/char_controller_p.gd" id="3_aq27v"]
+[ext_resource type="Script" uid="uid://db1jc8nm3r4a2" path="res://Entities/EntityComponents/fchar_controller_p.gd" id="3_aq27v"]
 [ext_resource type="Script" uid="uid://c616inraeljtg" path="res://Entities/EntityComponents/char_view.gd" id="4_o1dwq"]
 [ext_resource type="Texture2D" uid="uid://d7pcjja0igt" path="res://Assets/Spritesheet_chars/hero_gen.png" id="5_jdh73"]
 
@@ -286,6 +286,7 @@ _data = {
 }
 
 [node name="TestHero" type="CharacterBody2D" unique_id=1126827627 node_paths=PackedStringArray("controller", "view")]
+motion_mode = 1
 script = ExtResource("1_3165l")
 controller = NodePath("CharController_Player")
 view = NodePath("CharView")
@@ -295,6 +296,7 @@ data = SubResource("Resource_etvdl")
 shape = SubResource("CapsuleShape2D_svxex")
 
 [node name="CharController_Player" type="Node" parent="." unique_id=1042311906]
+process_mode = 1
 script = ExtResource("3_aq27v")
 metadata/_custom_type_script = "uid://db1jc8nm3r4a2"
 

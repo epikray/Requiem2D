@@ -23,6 +23,7 @@ position = Vector2(667, 417)
 speed = 20.0
 
 [node name="CameraCtrl" type="Camera2D" parent="." unique_id=267107579 node_paths=PackedStringArray("focusTarget")]
+position = Vector2(564, 409)
 zoom = Vector2(2, 2)
 script = ExtResource("5_iljfm")
 focusTarget = NodePath("../Entities/TestHero")

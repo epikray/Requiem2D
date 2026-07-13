@@ -1,5 +1,5 @@
-class_name CharController_P
-extends CharController
+class_name FCharController_P
+extends FCharController
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
