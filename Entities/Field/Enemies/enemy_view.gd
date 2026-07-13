@@ -1,12 +1,11 @@
 extends Area2D
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	# TODO: We are already extending Area2D, we don't need to connect this as a signal. But maybe it works just as well
 	area_entered.connect(seeing_react)
 	area_shape_entered.connect(seeing_shape_react)
 	pass # Replace with function body.
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -29,6 +28,7 @@ func seeing_shape_react(area_rid: RID, area: Area2D, area_shape_index: int, loca
 
 	print("Shape %d with name %s entered my field of view" % [other_shape_owner_id, other_shape_node.name])
 	pass
+
 
 func seeing_body_react(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
 	var body_shape_owner = body.shape_find_owner(body_shape_index)

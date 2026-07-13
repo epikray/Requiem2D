@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cugdwbva0g5o7"]
+
+[ext_resource type="Script" uid="uid://cogbef5qtsoe6" path="res://Entities/EntityComponents/stage_char.gd" id="1_kn1mj"]
+[ext_resource type="Texture2D" uid="uid://bs8nbrp2hsatn" path="res://Entities/Field/Enemies/TestMonster/Spritesheet_monsters/DevSlimeEnemy.png" id="1_ntxwo"]
+[ext_resource type="Script" uid="uid://c616inraeljtg" path="res://Entities/EntityComponents/char_view.gd" id="2_23av0"]
+
+[node name="TestEnemyS" type="Node2D" unique_id=141915163]
+script = ExtResource("1_kn1mj")
+
+[node name="CharView" type="Node2D" parent="." unique_id=49325532]
+script = ExtResource("2_23av0")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharView" unique_id=151245339]
+texture_filter = 1
+texture = ExtResource("1_ntxwo")
+
+[node name="CharController_NP" type="Node2D" parent="." unique_id=499075998]

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bs8nbrp2hsatn"
-path="res://.godot/imported/DevSlimeEnemy.png-ba6075508f761d62b4893b28152af984.ctex"
+path="res://.godot/imported/DevSlimeEnemy.png-4bbb093f5366699f779c309908914293.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/Enemies/Test_Slime/Spritesheet_monsters/DevSlimeEnemy.png"
-dest_files=["res://.godot/imported/DevSlimeEnemy.png-ba6075508f761d62b4893b28152af984.ctex"]
+source_file="res://Entities/Field/Enemies/TestMonster/Spritesheet_monsters/DevSlimeEnemy.png"
+dest_files=["res://.godot/imported/DevSlimeEnemy.png-4bbb093f5366699f779c309908914293.ctex"]
 
 [params]
 

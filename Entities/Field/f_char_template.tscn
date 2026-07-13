@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://c6scdcesmadqr"]
+
+[ext_resource type="Script" uid="uid://dv1jumgt8apu1" path="res://Entities/EntityComponents/field_char.gd" id="1_fvuw7"]
+[ext_resource type="Script" uid="uid://c616inraeljtg" path="res://Entities/EntityComponents/char_view.gd" id="1_ulnwp"]
+[ext_resource type="Script" uid="uid://db1jc8nm3r4a2" path="res://Entities/EntityComponents/char_controller_p.gd" id="2_fvuw7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mqgk0"]
+
+[node name="CharTemplate" type="CharacterBody2D" unique_id=1743917157 node_paths=PackedStringArray("controller", "view")]
+script = ExtResource("1_fvuw7")
+controller = NodePath("CharController_P")
+view = NodePath("CharView")
+
+[node name="BodyCollider" type="CollisionShape2D" parent="." unique_id=1043289349]
+shape = SubResource("CircleShape2D_mqgk0")
+
+[node name="CharView" type="Node2D" parent="." unique_id=2133376921]
+script = ExtResource("1_ulnwp")
+metadata/_custom_type_script = "uid://c616inraeljtg"
+
+[node name="CharController_P" type="Node" parent="." unique_id=20653689]
+script = ExtResource("2_fvuw7")
+metadata/_custom_type_script = "uid://db1jc8nm3r4a2"
