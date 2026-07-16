@@ -65,6 +65,15 @@ cancel={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="pc"
+2d_physics/layer_2="npc"
+2d_physics/layer_3="blocking_entity"
+2d_physics/layer_4="nonblocking_entity"
+2d_physics/layer_9="world_wall"
+2d_physics/layer_10="world_obstacle"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CharData" format=3 uid="uid://dfobe4i7dbntu"]
+
+[ext_resource type="Script" uid="uid://khk77soxlo2w" path="res://Objects/Actions/action.gd" id="1_knp3j"]
+[ext_resource type="Resource" uid="uid://dwdn7xv7lvfy4" path="res://Resources/Actions/TestAction.tres" id="2_qv4hh"]
+[ext_resource type="Script" uid="uid://c74rx366esm2m" path="res://Util/char_data.gd" id="3_0jj7w"]
+
+[resource]
+script = ExtResource("3_0jj7w")
+char_name = "Axel"
+actions = Array[ExtResource("1_knp3j")]([ExtResource("2_qv4hh")])
+metadata/_custom_type_script = "uid://c74rx366esm2m"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CharData" format=3 uid="uid://drqwkocufocyh"]
+
+[ext_resource type="Script" uid="uid://khk77soxlo2w" path="res://Objects/Actions/action.gd" id="1_sxgvh"]
+[ext_resource type="Script" uid="uid://c74rx366esm2m" path="res://Util/char_data.gd" id="2_at4dw"]
+[ext_resource type="Resource" uid="uid://dwdn7xv7lvfy4" path="res://Resources/Actions/TestAction.tres" id="2_ipn8e"]
+
+[resource]
+script = ExtResource("2_at4dw")
+char_name = "Test Slime"
+actions = Array[ExtResource("1_sxgvh")]([ExtResource("2_ipn8e")])
+metadata/_custom_type_script = "uid://c74rx366esm2m"

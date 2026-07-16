@@ -1,5 +1,9 @@
+class_name StageChar
 extends Node
 
+@export var controller : SCharController
+@export var view : CharView
+@export var data: CharData
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

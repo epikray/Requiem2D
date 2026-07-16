@@ -1,5 +1,6 @@
 [gd_resource type="Resource" script_class="CharData" format=3 uid="uid://blu8ylvn6k725"]
 
+[ext_resource type="Script" uid="uid://khk77soxlo2w" path="res://Objects/Actions/action.gd" id="1_8u4r8"]
 [ext_resource type="Script" uid="uid://c74rx366esm2m" path="res://Util/char_data.gd" id="1_dhsu8"]
 
 [resource]

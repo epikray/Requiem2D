@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://demtldlqpbfdw"]
 
-[ext_resource type="Script" uid="uid://dv1jumgt8apu1" path="res://Entities/EntityComponents/field_char.gd" id="1_njego"]
-[ext_resource type="Texture2D" uid="uid://bs8nbrp2hsatn" path="res://Entities/Field/Enemies/TestMonster/Spritesheet_monsters/DevSlimeEnemy.png" id="1_qaexs"]
-[ext_resource type="Script" uid="uid://b2bspvpg05n2i" path="res://Entities/Field/Enemies/enemy_view.gd" id="3_p8un8"]
-[ext_resource type="Script" uid="uid://c616inraeljtg" path="res://Entities/EntityComponents/char_view.gd" id="3_yogi6"]
-[ext_resource type="Script" uid="uid://cyoucdk34dkh8" path="res://Entities/EntityComponents/fchar_controller_np.gd" id="4_yogi6"]
+[ext_resource type="Script" uid="uid://dv1jumgt8apu1" path="res://Entities/EntityComponents/field_char.gd" id="1_qwc5v"]
+[ext_resource type="Resource" uid="uid://drqwkocufocyh" path="res://Resources/Characters/test_enemy.tres" id="2_27j7t"]
+[ext_resource type="Script" uid="uid://cyoucdk34dkh8" path="res://Entities/EntityComponents/fchar_controller_np.gd" id="2_mko8a"]
+[ext_resource type="Script" uid="uid://b2bspvpg05n2i" path="res://Entities/Field/Enemies/enemy_view.gd" id="3_27j7t"]
+[ext_resource type="Script" uid="uid://c616inraeljtg" path="res://Entities/EntityComponents/char_view.gd" id="4_jxy41"]
+[ext_resource type="Texture2D" uid="uid://bs8nbrp2hsatn" path="res://Entities/Field/Enemies/TestMonster/Spritesheet_monsters/DevSlimeEnemy.png" id="5_m50bk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qaexs"]
 
@@ -12,32 +13,35 @@
 radius = 54.0
 
 [node name="DebugSlime" type="CharacterBody2D" unique_id=28527835 node_paths=PackedStringArray("controller", "view")]
-script = ExtResource("1_njego")
+collision_layer = 2
+motion_mode = 1
+script = ExtResource("1_qwc5v")
 controller = NodePath("CharController_NP")
 view = NodePath("CharView")
+data = ExtResource("2_27j7t")
 speed = 5.0
 
 [node name="BodyCollision" type="CollisionShape2D" parent="." unique_id=1384426209]
 shape = SubResource("CircleShape2D_qaexs")
 
-[node name="CharController_NP" type="Node" parent="." unique_id=955090560]
+[node name="CharController_NP" type="Node2D" parent="." unique_id=1277256805]
 process_mode = 1
-script = ExtResource("4_yogi6")
-metadata/_custom_type_script = "uid://cyoucdk34dkh8"
+script = ExtResource("2_mko8a")
 
 [node name="Area2D" type="Area2D" parent="CharController_NP" unique_id=1986368345]
-script = ExtResource("3_p8un8")
+collision_layer = 2
+script = ExtResource("3_27j7t")
 
 [node name="ViewCollision" type="CollisionShape2D" parent="CharController_NP/Area2D" unique_id=1719797243]
 shape = SubResource("CircleShape2D_ufnfn")
 debug_color = Color(3.3210217e-06, 0.6419954, 0.3303319, 0.41960785)
 
 [node name="CharView" type="Node2D" parent="." unique_id=454253895]
-script = ExtResource("3_yogi6")
+script = ExtResource("4_jxy41")
 metadata/_custom_type_script = "uid://c616inraeljtg"
 
 [node name="Sprite2D" type="Sprite2D" parent="CharView" unique_id=909604189]
 texture_filter = 1
-texture = ExtResource("1_qaexs")
+texture = ExtResource("5_m50bk")
 
 [connection signal="body_shape_entered" from="CharController_NP/Area2D" to="CharController_NP/Area2D" method="seeing_body_react"]

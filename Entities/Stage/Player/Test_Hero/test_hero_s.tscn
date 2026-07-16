@@ -3,9 +3,12 @@
 [ext_resource type="Script" uid="uid://cogbef5qtsoe6" path="res://Entities/EntityComponents/stage_char.gd" id="1_b5xxd"]
 [ext_resource type="Texture2D" uid="uid://d2ln1ywdrhaet" path="res://Assets/Spritesheet_chars/hero_gen_sword.png" id="1_fpa7l"]
 [ext_resource type="Script" uid="uid://c616inraeljtg" path="res://Entities/EntityComponents/char_view.gd" id="2_yrxtc"]
+[ext_resource type="Script" uid="uid://bkwi0hp1niof8" path="res://Entities/EntityComponents/schar_controller_p.gd" id="4_yrxtc"]
 
-[node name="TestHeroS" type="Node2D" unique_id=1365503991]
+[node name="TestHeroS" type="Node2D" unique_id=1365503991 node_paths=PackedStringArray("controller", "view")]
 script = ExtResource("1_b5xxd")
+controller = NodePath("SCharController_P")
+view = NodePath("CharView")
 
 [node name="CharView" type="Node2D" parent="." unique_id=2113519688]
 script = ExtResource("2_yrxtc")
@@ -19,3 +22,7 @@ vframes = 8
 frame = 19
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CharView/Sprite2D" unique_id=1870223728]
+
+[node name="SCharController_P" type="Node" parent="." unique_id=659498997]
+script = ExtResource("4_yrxtc")
+metadata/_custom_type_script = "uid://bkwi0hp1niof8"

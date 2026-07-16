@@ -16,13 +16,8 @@ var playerActiveInStage : bool = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	player = Global.get_player();
-	
-	field.set_primary(true)
-	stage.set_primary(false)
-	
-	#player.DEBUG_enter_stage.connect(_on_battle)
-	#player.DEBUG_exit_stage.connect(_on_battle_resolve)
-	pass # Replace with function body.
+	view_field()
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -39,13 +34,11 @@ func _on_battle() -> void:
 	
 	stage.load_battle_data(data)
 	view_stage()
-	player.DEBUG_in_stage = true
 	pass
 
 # Switch from stage to field
 func _on_battle_resolve() -> void:
 	view_field()
-	player.DEBUG_in_stage = false
 	pass
 
 # TODO: Eventually camera will have its own manager and directives based on certain signal

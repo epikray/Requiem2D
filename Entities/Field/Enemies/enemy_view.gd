@@ -3,8 +3,8 @@ extends Area2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	# TODO: We are already extending Area2D, we don't need to connect this as a signal. But maybe it works just as well
-	area_entered.connect(seeing_react)
-	area_shape_entered.connect(seeing_shape_react)
+	body_entered.connect(seeing_react)
+	body_shape_entered.connect(seeing_shape_react)
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -26,7 +26,7 @@ func seeing_shape_react(area_rid: RID, area: Area2D, area_shape_index: int, loca
 	var other_shape_owner_id = area.shape_find_owner(area_shape_index)
 	var other_shape_node = area.shape_owner_get_owner(other_shape_owner_id)
 
-	print("Shape %d with name %s entered my field of view" % [other_shape_owner_id, other_shape_node.name])
+	print("Shape %d with name %s entered enemy field of view" % [other_shape_owner_id, other_shape_node.name])
 	pass
 
 
@@ -34,5 +34,5 @@ func seeing_body_react(body_rid: RID, body: Node2D, body_shape_index: int, local
 	var body_shape_owner = body.shape_find_owner(body_shape_index)
 	var body_shape_node = body.shape_owner_get_owner(body_shape_owner)
 
-	print("Body %d with name %s entered my field of view" % [body_shape_owner, body_shape_node.name])
+	print("Body %d with name %s entered enemy field of view" % [body_shape_owner, body_shape_node.name])
 	pass
