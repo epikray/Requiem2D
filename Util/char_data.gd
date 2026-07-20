@@ -1,5 +1,9 @@
-extends Resource
+extends RefCounted
 class_name CharData
-@export var char_name : String
 
-@export var actions : Array[Action]
+var char_name : String
+var actions : Array[Action]
+var health : int
+var stamina : int
+var strength : int
+var magic : int

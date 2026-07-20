@@ -10,6 +10,10 @@ script = ExtResource("1_kn1mj")
 controller = NodePath("SCharController_NP")
 view = NodePath("CharView")
 
+[node name="SCharController_NP" type="Node2D" parent="." unique_id=859510794]
+script = ExtResource("4_lheg1")
+metadata/_custom_type_script = "uid://csx1kuxgq701k"
+
 [node name="CharView" type="Node2D" parent="." unique_id=773735793]
 script = ExtResource("2_23av0")
 metadata/_custom_type_script = "uid://c616inraeljtg"
@@ -17,7 +21,3 @@ metadata/_custom_type_script = "uid://c616inraeljtg"
 [node name="Sprite2D" type="Sprite2D" parent="CharView" unique_id=151245339]
 texture_filter = 1
 texture = ExtResource("1_ntxwo")
-
-[node name="SCharController_NP" type="Node" parent="." unique_id=1300053433]
-script = ExtResource("4_lheg1")
-metadata/_custom_type_script = "uid://csx1kuxgq701k"

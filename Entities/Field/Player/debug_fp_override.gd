@@ -10,12 +10,12 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_physical_key_pressed(KEY_P):
 		save_chardata()
 	pass
 
 func save_chardata() -> void:
-	var err = ResourceSaver.save(parent.data)
-	print("DEBUG: Overwrote char data of ", parent.name, err)
+	#var err = ResourceSaver.save(parent.data)
+	#print("DEBUG: Overwrote char data of ", parent.name, err)
 	pass

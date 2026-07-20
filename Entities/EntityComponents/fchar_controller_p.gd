@@ -5,12 +5,10 @@ extends FCharController
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	interactArea.body_entered.connect(_list_overlapping_bodies2)
-	
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	_read_input()
 	_rotate_ia()
 	if ip_conf:
@@ -27,9 +25,9 @@ func _read_input() -> void:
 		
 	ip_canc = Input.is_action_just_pressed("cancel")
 	if Input.is_action_pressed("cancel") :
-		ip_canc = true
+		i_canc = true
 	else:
-		ip_canc = false
+		i_canc = false
 	pass
 	
 func _rotate_ia() -> void:
@@ -42,16 +40,15 @@ func _rotate_ia() -> void:
 	pass
 	
 func _querry_interactables() -> void:
-	_list_overlapping_bodies()
+	var bodies = interactArea.get_overlapping_bodies()	
+	if bodies.is_empty():
+		return
+		
+	print("found a body when querried")
+		
+	if bodies[0] is FieldChar:
+		var fchar = bodies[0] as FieldChar
+		print("Body is a FieldChar", fchar.name)
+		try_battle.emit(fchar)
+		return
 	
-func _list_overlapping_bodies() -> void:
-	var bodies = interactArea.get_overlapping_bodies()
-	print("InteractArea querry:\n",bodies)
-	var others = interactArea
-pass	
-
-func _list_overlapping_bodies2(body: Node2D) -> void:
-	var bodies = interactArea.get_overlapping_bodies()
-	print("InteractArea querry:\n", body, bodies)
-	var others = interactArea
-pass	

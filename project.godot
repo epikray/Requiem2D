@@ -25,7 +25,11 @@ project/assembly_name="Requiem2D"
 
 [global_group]
 
-FieldEntities="Entities that exist in the field"
+FieldEntities="Entities in the field"
+FieldChars="Characters in the field"
+FieldInteractable="Interactables in the field"
+PCFieldChars="Player controlled characters in the field"
+NPCFieldChars="Non-player controlled characters in the field"
 
 [input]
 

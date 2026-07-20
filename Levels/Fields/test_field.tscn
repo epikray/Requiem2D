@@ -6,19 +6,20 @@
 [ext_resource type="PackedScene" uid="uid://demtldlqpbfdw" path="res://Entities/Field/Enemies/test_enemy_f.tscn" id="4_iljfm"]
 [ext_resource type="Script" uid="uid://bm1c250d30gwc" path="res://Util/camera_controller.gd" id="5_iljfm"]
 
-[node name="TestField" type="Node2D" unique_id=787950061 node_paths=PackedStringArray("terrain", "entities")]
+[node name="TestField" type="Node2D" unique_id=787950061 node_paths=PackedStringArray("terrain", "entities", "camera")]
 script = ExtResource("1_ypbdo")
 terrain = NodePath("TestTileMap")
 entities = NodePath("Entities")
+camera = NodePath("CameraCtrl")
 
 [node name="TestTileMap" parent="." unique_id=1258981773 instance=ExtResource("1_1c2mv")]
 
 [node name="Entities" type="Node2D" parent="." unique_id=268200466]
 
-[node name="TestHero" parent="Entities" unique_id=1126827627 groups=["FieldEntities"] instance=ExtResource("3_r7s42")]
+[node name="TestHero" parent="Entities" unique_id=1126827627 instance=ExtResource("3_r7s42")]
 position = Vector2(462, 417)
 
-[node name="TestMonster" parent="Entities" unique_id=28527835 groups=["FieldEntities"] instance=ExtResource("4_iljfm")]
+[node name="TestMonster" parent="Entities" unique_id=28527835 instance=ExtResource("4_iljfm")]
 position = Vector2(667, 417)
 speed = 20.0
 

@@ -14,3 +14,8 @@ stage = NodePath("TestStage")
 [node name="TestStage" parent="." unique_id=1586836765 instance=ExtResource("3_ub4j8")]
 
 [node name="Controllers" type="Node2D" parent="." unique_id=1746643913]
+
+[connection signal="begin_battle" from="TestField" to="." method="_on_begin_battle"]
+[connection signal="begin_battle" from="TestField" to="TestStage" method="_on_field_begin_battle"]
+[connection signal="resovle_battle" from="TestStage" to="." method="_on_resovle_battle"]
+[connection signal="resovle_battle" from="TestStage" to="TestField" method="_on_stage_resovle_battle"]

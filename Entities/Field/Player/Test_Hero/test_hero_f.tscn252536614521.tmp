@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://bytjkwqswwl50"]
 
 [ext_resource type="Script" uid="uid://dv1jumgt8apu1" path="res://Entities/EntityComponents/field_char.gd" id="1_3165l"]
-[ext_resource type="Resource" uid="uid://dfobe4i7dbntu" path="res://Resources/Characters/axel.tres" id="2_6s1ou"]
 [ext_resource type="Script" uid="uid://db1jc8nm3r4a2" path="res://Entities/EntityComponents/fchar_controller_p.gd" id="3_aq27v"]
 [ext_resource type="PackedScene" uid="uid://bea8k8xxi5cgm" path="res://Entities/Stage/Player/Test_Hero/test_hero_s.tscn" id="3_o1dwq"]
 [ext_resource type="Script" uid="uid://c616inraeljtg" path="res://Entities/EntityComponents/char_view.gd" id="4_o1dwq"]
@@ -291,13 +290,13 @@ motion_mode = 1
 script = ExtResource("1_3165l")
 controller = NodePath("CharController_Player")
 view = NodePath("CharView")
-dataRes = ExtResource("2_6s1ou")
 stageRep = ExtResource("3_o1dwq")
 
 [node name="HeroCollisionShape" type="CollisionShape2D" parent="." unique_id=168338777]
 shape = SubResource("CircleShape2D_aq27v")
 
 [node name="CharController_Player" type="Node2D" parent="." unique_id=1023433042 node_paths=PackedStringArray("interactArea")]
+process_mode = 1
 script = ExtResource("3_aq27v")
 interactArea = NodePath("Area2D")
 

@@ -6,9 +6,6 @@ class_name DataScene extends Node
 #	Read dynamic-data file -> Instance rewritable Data classes -> (when wished for) Write dynamic-data file 
 ##
 
-@export var PlayerData : CharData
-@export var SlimeData : CharData
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Global.data = self
@@ -16,5 +13,5 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass

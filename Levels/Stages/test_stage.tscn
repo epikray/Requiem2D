@@ -2,11 +2,13 @@
 
 [ext_resource type="Script" uid="uid://b6xoxxbgh3pot" path="res://Levels/Stages/stage.gd" id="1_rx61o"]
 [ext_resource type="Texture2D" uid="uid://dhvpiayxv0j8c" path="res://Assets/Backgrounds/a275.png" id="1_w0uf1"]
+[ext_resource type="PackedScene" uid="uid://bvajt0sg0nnab" path="res://Util/Scenes/camera_ctrl.tscn" id="3_15lgv"]
 
-[node name="TestStage" type="Node2D" unique_id=1586836765 node_paths=PackedStringArray("terrain", "entities")]
+[node name="TestStage" type="Node2D" unique_id=1586836765 node_paths=PackedStringArray("terrain", "entities", "camera")]
 script = ExtResource("1_rx61o")
 terrain = NodePath("Background")
 entities = NodePath("Entities")
+camera = NodePath("CameraCtrl")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1632606567]
 texture_filter = 1
@@ -19,3 +21,8 @@ position = Vector2(-67, 31)
 
 [node name="EPlacement" type="Marker2D" parent="Entities" unique_id=807866059]
 position = Vector2(67, 31)
+
+[node name="CameraCtrl" parent="." unique_id=1614862838 node_paths=PackedStringArray("focusTarget") instance=ExtResource("3_15lgv")]
+enabled = false
+zoom = Vector2(3, 3)
+focusTarget = NodePath("../Background")

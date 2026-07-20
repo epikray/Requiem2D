@@ -4,6 +4,7 @@
 [ext_resource type="Resource" uid="uid://drqwkocufocyh" path="res://Resources/Characters/test_enemy.tres" id="2_27j7t"]
 [ext_resource type="Script" uid="uid://cyoucdk34dkh8" path="res://Entities/EntityComponents/fchar_controller_np.gd" id="2_mko8a"]
 [ext_resource type="Script" uid="uid://b2bspvpg05n2i" path="res://Entities/Field/Enemies/enemy_view.gd" id="3_27j7t"]
+[ext_resource type="PackedScene" uid="uid://cugdwbva0g5o7" path="res://Entities/Stage/Enemies/test_enemy_s.tscn" id="3_jxy41"]
 [ext_resource type="Script" uid="uid://c616inraeljtg" path="res://Entities/EntityComponents/char_view.gd" id="4_jxy41"]
 [ext_resource type="Texture2D" uid="uid://bs8nbrp2hsatn" path="res://Entities/Field/Enemies/TestMonster/Spritesheet_monsters/DevSlimeEnemy.png" id="5_m50bk"]
 
@@ -12,13 +13,14 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_ufnfn"]
 radius = 54.0
 
-[node name="DebugSlime" type="CharacterBody2D" unique_id=28527835 node_paths=PackedStringArray("controller", "view")]
+[node name="DebugSlime" type="CharacterBody2D" unique_id=28527835 node_paths=PackedStringArray("controller", "view") groups=["FieldChars", "NPCFieldChars"]]
 collision_layer = 2
 motion_mode = 1
 script = ExtResource("1_qwc5v")
 controller = NodePath("CharController_NP")
 view = NodePath("CharView")
-data = ExtResource("2_27j7t")
+dataRes = ExtResource("2_27j7t")
+stageRep = ExtResource("3_jxy41")
 speed = 5.0
 
 [node name="BodyCollision" type="CollisionShape2D" parent="." unique_id=1384426209]

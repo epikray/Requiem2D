@@ -21,40 +21,33 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-# Switch from field to stage
-func _on_battle() -> void:
-	
-	var data : BattleData
-	#data.player = player
-	#data.enemy = data_gathered_from_whoever_signaled_to_battle
-	
-	
-	stage.load_battle_data(data)
-	view_stage()
+func _process(_delta: float) -> void:
 	pass
 
 # Switch from stage to field
 func _on_battle_resolve() -> void:
 	view_field()
 	pass
-
-# TODO: Eventually camera will have its own manager and directives based on certain signal
-
+	
 # Hide stage and focus view on the player
 func view_field() -> void: 
-	field.visible = true;
-	field.set_process(true);
-	stage.visible = false;
-	stage.set_process(false)
+	field.set_primary(true)
+	stage.set_primary(false)
 	pass
 
 # Hide field and focus view on the center of the stage
 func view_stage() -> void:
-	field.visible = false;
-	field.set_process(false);
-	stage.visible = true;
-	stage.set_process(true);
+	field.set_primary(false)
+	stage.set_primary(true)
 	pass
+
+
+func _on_begin_battle(player_team: Array[StageChar], enemy_team: Array[StageChar]) -> void:
+	view_stage()
+	pass # Replace with function body.
+
+
+# TODO: This is 
+func _on_resovle_battle() -> void:
+	view_field()
+	pass # Replace with function body.
