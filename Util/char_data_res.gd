@@ -3,6 +3,8 @@ class_name CharDataRes
 
 @export var char_name : String
 @export var actions : Array[Action]
+#@export var qs_actions : Array[Action]
+#@export var cs_actions : Array[Action]
 @export var health : int
 @export var stamina : int
 @export var strength : int

@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://cc6kqjej56x5v"]
+
+[ext_resource type="Script" uid="uid://bkmaie12bu028" path="res://Util/time_presenter.gd" id="1_372ue"]
+
+[node name="HBoxContainer" type="HBoxContainer" unique_id=825801591]
+offset_right = 96.0
+offset_bottom = 23.0
+
+[node name="LTime" type="Label" parent="." unique_id=1278171646]
+layout_mode = 2
+text = "Time:"
+
+[node name="LSeconds" type="Label" parent="." unique_id=1047415558]
+layout_mode = 2
+text = "0"
+
+[node name="VSeparator" type="VSeparator" parent="." unique_id=799314952]
+layout_mode = 2
+
+[node name="LTimeMod" type="Label" parent="." unique_id=164445792]
+layout_mode = 2
+text = "60s"
+
+[node name="Timer" type="Timer" parent="." unique_id=1999747162 node_paths=PackedStringArray("time", "time_mod")]
+autostart = true
+script = ExtResource("1_372ue")
+time = NodePath("../LSeconds")
+time_mod = NodePath("../LTimeMod")
+
+[node name="VBoxContainer" type="GridContainer" parent="." unique_id=609397377]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+columns = 3

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Action" format=3 uid="uid://ciehyx15lnbf1"]
+
+[ext_resource type="Script" uid="uid://khk77soxlo2w" path="res://Objects/Actions/action.gd" id="1_xl13g"]
+
+[resource]
+script = ExtResource("1_xl13g")
+windUpTime = 1.0
+actTime = 0.1
+coolDownTime = 1.0
+shape = 7
+fakeDamage = 10
+name = "Beam"
+description = "Slow charged Beam"
+metadata/_custom_type_script = "uid://khk77soxlo2w"

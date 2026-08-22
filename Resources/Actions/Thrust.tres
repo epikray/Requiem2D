@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Action" format=3 uid="uid://b7xtvksk48u83"]
+
+[ext_resource type="Script" uid="uid://khk77soxlo2w" path="res://Objects/Actions/action.gd" id="1_kgnci"]
+
+[resource]
+script = ExtResource("1_kgnci")
+windUpTime = 0.1
+actTime = 0.05
+coolDownTime = 0.05
+shape = 1
+fakeDamage = 10
+name = "Thrust"
+description = "Forward thrust"
+metadata/_custom_type_script = "uid://khk77soxlo2w"

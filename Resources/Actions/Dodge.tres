@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Action" format=3 uid="uid://bnceavol7h51y"]
+
+[ext_resource type="Script" uid="uid://khk77soxlo2w" path="res://Objects/Actions/action.gd" id="1_s4tq7"]
+
+[resource]
+script = ExtResource("1_s4tq7")
+actTime = 0.5
+coolDownTime = 0.1
+shape = 5
+fakeDamage = 10
+name = "Dodge"
+description = "Sidestep an attack"
+metadata/_custom_type_script = "uid://khk77soxlo2w"

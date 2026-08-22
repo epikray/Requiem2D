@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" format=3 uid="uid://immda86n075k"]
+
+[ext_resource type="Texture2D" uid="uid://c4ikrd5w2morj" path="res://Assets/Spritesheet_fx/Effect and FX Pixel All Free/Free/Part 4/174.png" id="1_8boy5"]
+
+[resource]
+atlas = ExtResource("1_8boy5")
+region = Rect2(0, 256, 640, 64)

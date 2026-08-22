@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://bq23rhnguerni"]
+
+[ext_resource type="Script" uid="uid://b3nkwpr4t1xs0" path="res://GUI/quick_action_selection.gd" id="1_obnyk"]
+[ext_resource type="Texture2D" uid="uid://cs8bxip5pbgf2" path="res://Assets/Spirtes_extras/icon_parry_atlas.tres" id="2_obnyk"]
+[ext_resource type="Texture2D" uid="uid://daao62kgwqmyk" path="res://Assets/Spirtes_extras/icon_dodge_atlas.tres" id="3_26urc"]
+[ext_resource type="Texture2D" uid="uid://dr2w56gf7d58o" path="res://Assets/Spirtes_extras/icon_block_atlas.tres" id="4_7ndjs"]
+
+[node name="Control" type="GridContainer" unique_id=1423943904 node_paths=PackedStringArray("pan1", "pan2", "pan3", "pan4", "pan5", "pan6", "pan7", "pan8", "pan9")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 3
+script = ExtResource("1_obnyk")
+pan1 = NodePath("Panel")
+pan2 = NodePath("Panel2")
+pan3 = NodePath("Panel3")
+pan4 = NodePath("Panel4")
+pan5 = NodePath("Panel5")
+pan6 = NodePath("Panel6")
+pan7 = NodePath("Panel7")
+pan8 = NodePath("Panel8")
+pan9 = NodePath("Panel9")
+
+[node name="Panel" type="Panel" parent="." unique_id=1578451093]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+focus_mode = 2
+
+[node name="Panel2" type="Panel" parent="." unique_id=1780303183]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+
+[node name="Panel3" type="Panel" parent="." unique_id=1752989746]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel3" unique_id=930798943]
+layout_mode = 0
+offset_right = 16.0
+offset_bottom = 16.0
+texture = ExtResource("2_obnyk")
+
+[node name="Panel4" type="Panel" parent="." unique_id=1754519619]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel4" unique_id=523893841]
+layout_mode = 0
+offset_right = 16.0
+offset_bottom = 16.0
+texture = ExtResource("3_26urc")
+
+[node name="Panel5" type="Panel" parent="." unique_id=182131200]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel5" unique_id=12205715]
+layout_mode = 0
+offset_right = 16.0
+offset_bottom = 16.0
+texture = ExtResource("4_7ndjs")
+
+[node name="Panel6" type="Panel" parent="." unique_id=1420728658]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+
+[node name="Panel7" type="Panel" parent="." unique_id=1060070117]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+
+[node name="Panel8" type="Panel" parent="." unique_id=1575260011]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+
+[node name="Panel9" type="Panel" parent="." unique_id=1060107854]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2

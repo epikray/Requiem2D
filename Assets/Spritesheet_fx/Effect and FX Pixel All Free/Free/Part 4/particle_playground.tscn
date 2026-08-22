@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://c1eqfksy61yq3"]
+
+[ext_resource type="Texture2D" uid="uid://pu803bcbnlok" path="res://Assets/Spritesheet_fx/Effect and FX Pixel All Free/Free/Part 4/175_red.tres" id="1_a3jhw"]
+[ext_resource type="Script" uid="uid://oi7xfrcrig6d" path="res://Util/spinner.gd" id="1_seb27"]
+[ext_resource type="Texture2D" uid="uid://dnicfbh1s4lsq" path="res://Assets/Spritesheet_fx/Effect and FX Pixel All Free/Free/Part 9/428_r.tres" id="3_2abwd"]
+[ext_resource type="Curve2D" uid="uid://crby1pq7xxd45" path="res://Resources/Misc/new_curve_2d.tres" id="4_mr0xs"]
+[ext_resource type="Texture2D" uid="uid://crkocdie1w1ls" path="res://Assets/Spirtes_extras/test_sword.png" id="5_bmj4s"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_2abwd"]
+particles_animation = true
+particles_anim_h_frames = 10
+particles_anim_v_frames = 1
+particles_anim_loop = true
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_seb27"]
+particle_flag_disable_z = true
+angle_min = 1.0728835e-05
+angle_max = 360.00003
+gravity = Vector3(0, 0, 0)
+anim_speed_min = 1.0
+anim_speed_max = 1.0
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_seb27"]
+particles_animation = true
+particles_anim_h_frames = 10
+particles_anim_v_frames = 1
+particles_anim_loop = true
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_2abwd"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 0, 0)
+anim_speed_min = 1.0
+anim_speed_max = 1.0
+sub_emitter_mode = 1
+sub_emitter_frequency = 4.0
+sub_emitter_keep_velocity = true
+
+[sub_resource type="Animation" id="Animation_2abwd"]
+resource_name = "test_particle_anim"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mr0xs"]
+_data = {
+&"test_particle_anim": SubResource("Animation_2abwd")
+}
+
+[node name="Node2D" type="Node2D" unique_id=1153217225]
+
+[node name="Test VFX" type="Node2D" parent="." unique_id=400195651]
+position = Vector2(-248, -113)
+
+[node name="GPUParent" type="Node2D" parent="Test VFX" unique_id=202733879]
+script = ExtResource("1_seb27")
+t_speed = 0.09
+rorbit_x = 10.0
+rorbit_y = 10.0
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="Test VFX/GPUParent" unique_id=347983837]
+material = SubResource("CanvasItemMaterial_2abwd")
+amount = 1
+texture = ExtResource("3_2abwd")
+lifetime = 0.43
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_seb27")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Test VFX/GPUParent" unique_id=1851006591]
+material = SubResource("CanvasItemMaterial_seb27")
+amount = 1
+texture = ExtResource("1_a3jhw")
+lifetime = 0.51
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_2abwd")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Test VFX/GPUParent" unique_id=776660012]
+libraries/ = SubResource("AnimationLibrary_mr0xs")
+
+[node name="Path2D" type="Path2D" parent="Test VFX/GPUParent" unique_id=473768805]
+curve = ExtResource("4_mr0xs")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1718965872]
+zoom = Vector2(2, 2)
+
+[node name="Slash FX" type="Node2D" parent="." unique_id=1365036635]
+
+[node name="VFXParent" type="Node2D" parent="Slash FX" unique_id=227950817]
+
+[node name="Sprite2D" type="Sprite2D" parent="Slash FX/VFXParent" unique_id=1180226718]
+scale = Vector2(2, 2)
+texture = ExtResource("5_bmj4s")

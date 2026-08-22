@@ -4,6 +4,10 @@
 
 [resource]
 script = ExtResource("1_e784o")
+windUpTime = 1.0
+actTime = 0.1
+coolDownTime = 1.0
+shape = 7
 fakeDamage = 10
 name = "Test Action"
 description = "Does nothing"

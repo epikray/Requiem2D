@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Action" format=3 uid="uid://7nn3pukbln85"]
+
+[ext_resource type="Script" uid="uid://khk77soxlo2w" path="res://Objects/Actions/action.gd" id="1_01mpt"]
+
+[resource]
+script = ExtResource("1_01mpt")
+windUpTime = 0.1
+actTime = 0.2
+coolDownTime = 0.1
+fakeDamage = 10
+name = "Slash"
+description = "Horizontal swipe"
+metadata/_custom_type_script = "uid://khk77soxlo2w"
