@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://c2oq3n8u2lpqu"]
+
+[ext_resource type="Texture2D" uid="uid://c12xh4eedrsfb" path="res://icon.svg" id="1_4aegc"]
+
+[node name="StageView" type="HFlowContainer" unique_id=145371493]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HPBar_Proto" type="ProgressBar" parent="." unique_id=204703644]
+custom_minimum_size = Vector2(100, 10)
+layout_mode = 2
+step = 1.0
+value = 2.0
+
+[node name="ChargeBar_Proto" type="TextureProgressBar" parent="." unique_id=762935384]
+custom_minimum_size = Vector2(100, 10)
+layout_mode = 2
+max_value = 6.0
+value = 2.0
+texture_under = ExtResource("1_4aegc")
+texture_progress = ExtResource("1_4aegc")
+tint_under = Color(1, 1, 1, 0.2509804)
+
+[node name="TabContainer" type="TabContainer" parent="." unique_id=1346946307]
+propagate_maximum_size = false
+layout_mode = 2

@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Requiem2D"
 run/main_scene="uid://b0v38xikcnit"
-config/features=PackedStringArray("4.6", "Forward Plus")
+config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
