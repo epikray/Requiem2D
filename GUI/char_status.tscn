@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://c6yu0bkuawhee"]
+
+[ext_resource type="Script" uid="uid://dlrmwrvh2k1y4" path="res://GUI/char_status.gd" id="1_dg410"]
+
+[node name="CharStatusPanel" type="VBoxContainer" unique_id=109587103 node_paths=PackedStringArray("ValLabel_HP", "ValLabel_SP")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dg410")
+ValLabel_HP = NodePath("HPBox/HPVal")
+ValLabel_SP = NodePath("SPBox/SPVal")
+
+[node name="HPBox" type="HBoxContainer" parent="." unique_id=1719708999]
+layout_mode = 2
+
+[node name="HPTitle" type="Label" parent="HPBox" unique_id=1436824040]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "HP"
+
+[node name="VSeparator" type="VSeparator" parent="HPBox" unique_id=492933362]
+layout_mode = 2
+
+[node name="HPVal" type="Label" parent="HPBox" unique_id=1454249869]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "100"
+
+[node name="SPBox" type="HBoxContainer" parent="." unique_id=304403713]
+layout_mode = 2
+
+[node name="SPTitle" type="Label" parent="SPBox" unique_id=1048659323]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "SP"
+
+[node name="VSeparator" type="VSeparator" parent="SPBox" unique_id=986546987]
+layout_mode = 2
+
+[node name="SPVal" type="Label" parent="SPBox" unique_id=1566771739]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "3"

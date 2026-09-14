@@ -3,20 +3,19 @@
 [ext_resource type="Script" uid="uid://b6xoxxbgh3pot" path="res://Levels/Stages/stage.gd" id="1_rx61o"]
 [ext_resource type="Texture2D" uid="uid://dhvpiayxv0j8c" path="res://Assets/Backgrounds/a275.png" id="1_w0uf1"]
 [ext_resource type="PackedScene" uid="uid://bvajt0sg0nnab" path="res://Util/Scenes/camera_ctrl.tscn" id="3_15lgv"]
-[ext_resource type="PackedScene" uid="uid://cc6kqjej56x5v" path="res://Util/Scenes/timescale_presentation.tscn" id="3_vq4ys"]
+[ext_resource type="PackedScene" uid="uid://cc6kqjej56x5v" path="res://GUI/timescale_presentation.tscn" id="3_vq4ys"]
 [ext_resource type="PackedScene" uid="uid://bgctmjw657jn3" path="res://Util/Scenes/time_modder.tscn" id="5_vq4ys"]
-[ext_resource type="Texture2D" uid="uid://hh3fu6mxe4cn" path="res://Assets/Spirtes_extras/Arrow1_1d.png" id="6_1gnxv"]
-[ext_resource type="Script" uid="uid://di84yadda7g2w" path="res://Resources/Actions/selection_mark.gd" id="7_t3at5"]
 [ext_resource type="Script" uid="uid://mvctbpc788uf" path="res://GUI/combat_ui.gd" id="7_wbqx5"]
 [ext_resource type="PackedScene" uid="uid://c4lvieov5u1ol" path="res://Resources/Actions/action_selection.tscn" id="8_lt45x"]
 [ext_resource type="PackedScene" uid="uid://butvv85erthu0" path="res://GUI/quick_selection.tscn" id="9_ahmxc"]
+[ext_resource type="PackedScene" uid="uid://c6yu0bkuawhee" path="res://GUI/char_status.tscn" id="11_7oxfa"]
 
 [node name="TestStage" type="Node2D" unique_id=1586836765 node_paths=PackedStringArray("terrain", "entities", "camera", "selMark", "combatUI")]
 script = ExtResource("1_rx61o")
 terrain = NodePath("Background")
 entities = NodePath("Entities")
 camera = NodePath("CameraCtrl")
-selMark = NodePath("Entities/Sprite2D")
+selMark = NodePath("")
 combatUI = NodePath("CombatUI")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1632606567]
@@ -31,11 +30,6 @@ position = Vector2(-67, 31)
 [node name="EPlacement" type="Marker2D" parent="Entities" unique_id=807866059]
 position = Vector2(67, 31)
 
-[node name="Sprite2D" type="Sprite2D" parent="Entities" unique_id=1136902892]
-position = Vector2(64, -3)
-texture = ExtResource("6_1gnxv")
-script = ExtResource("7_t3at5")
-
 [node name="CameraCtrl" parent="." unique_id=1614862838 node_paths=PackedStringArray("focusTarget") instance=ExtResource("3_15lgv")]
 enabled = false
 zoom = Vector2(3, 3)
@@ -44,7 +38,7 @@ focusTarget = NodePath("../Background")
 [node name="TimeModder" parent="." unique_id=245912603 instance=ExtResource("5_vq4ys")]
 key = 4194325
 
-[node name="CombatUI" type="Control" parent="." unique_id=774936282 node_paths=PackedStringArray("quickSelector", "classicSelector")]
+[node name="CombatUI" type="Control" parent="." unique_id=774936282 node_paths=PackedStringArray("stage", "quickSelector", "classicSelector", "playerStatus", "enemyStatus")]
 layout_mode = 3
 anchors_preset = 0
 offset_left = -192.0
@@ -52,8 +46,11 @@ offset_top = -109.0
 offset_right = 193.0
 offset_bottom = 106.0
 script = ExtResource("7_wbqx5")
+stage = NodePath("..")
 quickSelector = NodePath("Control")
 classicSelector = NodePath("ActionSelection")
+playerStatus = NodePath("PlayerStatus")
+enemyStatus = NodePath("EnemyStatus")
 
 [node name="TSPresentation" parent="CombatUI" unique_id=609397377 instance=ExtResource("3_vq4ys")]
 layout_mode = 0
@@ -86,3 +83,17 @@ offset_right = 377.0
 offset_bottom = 211.0
 grow_horizontal = 1
 grow_vertical = 1
+
+[node name="PlayerStatus" parent="CombatUI" unique_id=109587103 instance=ExtResource("11_7oxfa")]
+layout_mode = 1
+offset_left = 10.0
+offset_top = 11.0
+offset_right = 60.0
+offset_bottom = 49.0
+
+[node name="EnemyStatus" parent="CombatUI" unique_id=1405172015 instance=ExtResource("11_7oxfa")]
+layout_mode = 1
+offset_left = 324.0
+offset_top = 13.0
+offset_right = 374.0
+offset_bottom = 51.0

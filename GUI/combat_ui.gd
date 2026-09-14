@@ -1,12 +1,19 @@
 class_name CombatUIController
 extends Control
 
-# Direct dependency because I am lazy
+# Favored Controller, but we only have one controller, theres only one player :)
 @export var pcController : SCharController_P
+# We can rely on stage to find characters
+@export var stage : Stage
 
 @export var quickSelector : QuickSelection
 @export var classicSelector: ClassicSelection
-# @export var 
+
+@export var playerStatus : CharStatus
+@export var enemyStatus : CharStatus
+
+var currentPC : StageChar
+var focusedNPC: StageChar
 
 enum cuiState {DEFAULT, CLASSIC, TARGETTING}
 var state : cuiState
@@ -101,7 +108,8 @@ func _classicMode(delta: float) -> void:
 	
 	
 	pass
-	
+
+# TODO: should target selection be handeled by the ui? no
 func _targettingMode(delta: float) -> void:
 	print("Targetting state")	
 	

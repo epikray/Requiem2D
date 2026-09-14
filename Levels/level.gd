@@ -15,7 +15,7 @@ var playerActiveInStage : bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	player = Global.get_player();
+	player = Global.get_player_field();
 	view_field()
 	pass
 

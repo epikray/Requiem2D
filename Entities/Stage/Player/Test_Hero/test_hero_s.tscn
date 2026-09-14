@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://c616inraeljtg" path="res://Entities/EntityComponents/char_view.gd" id="2_yrxtc"]
 [ext_resource type="Script" uid="uid://bkwi0hp1niof8" path="res://Entities/EntityComponents/schar_controller_p.gd" id="4_yrxtc"]
 
-[node name="TestHeroS" type="Node2D" unique_id=1365503991 node_paths=PackedStringArray("controller", "view")]
+[node name="TestHeroS" type="Node2D" unique_id=1365503991 node_paths=PackedStringArray("controller", "view") groups=["NPCStageChars", "StageChars"]]
 script = ExtResource("1_b5xxd")
 controller = NodePath("SCharController_P")
 view = NodePath("CharView")

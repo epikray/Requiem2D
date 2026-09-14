@@ -1,13 +1,18 @@
 [gd_scene format=3 uid="uid://c1eqfksy61yq3"]
 
+[ext_resource type="Script" uid="uid://cn3wxpl00i4aw" path="res://Util/particle_playground.gd" id="1_qcslt"]
 [ext_resource type="Script" uid="uid://oi7xfrcrig6d" path="res://Util/spinner.gd" id="1_rrpon"]
 [ext_resource type="Texture2D" uid="uid://dnicfbh1s4lsq" path="res://Assets/Spritesheet_fx/Effect and FX Pixel All Free/Free/Part 9/428_r.tres" id="2_qt75m"]
 [ext_resource type="Texture2D" uid="uid://pu803bcbnlok" path="res://Assets/Spritesheet_fx/Effect and FX Pixel All Free/Free/Part 4/175_red.tres" id="3_8kd8m"]
-[ext_resource type="Curve2D" uid="uid://crby1pq7xxd45" path="res://Resources/Misc/new_curve_2d.tres" id="4_qcslt"]
 [ext_resource type="Script" uid="uid://cnwngllt4i3f3" path="res://Resources/Actions/action_fx.gd" id="5_qt75m"]
 [ext_resource type="Script" uid="uid://deh3ew2scbhbw" path="res://Resources/Actions/vfx_block.gd" id="6_8kd8m"]
 [ext_resource type="Texture2D" uid="uid://crkocdie1w1ls" path="res://Assets/Spirtes_extras/test_sword.png" id="6_tdij5"]
 [ext_resource type="Texture2D" uid="uid://dyyt0nql7hrwt" path="res://Assets/Kenny_Particles/kenney_particle_pack/trace_07_64.png" id="7_ptie1"]
+[ext_resource type="Texture2D" uid="uid://clxwn0o38161" path="res://Assets/Kenny_Particles/kenney_particle_pack/trace_07_64_h.png" id="8_8kd8m"]
+[ext_resource type="Texture2D" uid="uid://dgnm6gfyx8vyn" path="res://Assets/Spirtes_extras/test_shield.png" id="10_qcslt"]
+[ext_resource type="Texture2D" uid="uid://wrl2opvbwb8h" path="res://Assets/Kenny_Particles/kenney_particle_pack/circle_04.png" id="11_fptwc"]
+[ext_resource type="Texture2D" uid="uid://bs8nbrp2hsatn" path="res://Entities/Field/Enemies/TestMonster/Spritesheet_monsters/DevSlimeEnemy.png" id="12_tdij5"]
+[ext_resource type="Texture2D" uid="uid://chhyu6xne3par" path="res://Assets/Spritesheet_chars/hero_atlas.tres" id="13_ptie1"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_2abwd"]
 particles_animation = true
@@ -58,16 +63,58 @@ _data = {
 &"test_particle_anim": SubResource("Animation_2abwd")
 }
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ncnps"]
+[sub_resource type="Curve" id="Curve_tdij5"]
+_data = [Vector2(0.0038167983, 0.2474227), 0.0, 0.0, 0, 0, Vector2(0.3129771, 0), 0.0, 0.0, 0, 0, Vector2(0.6984733, 1), 0.032939594, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_tdij5"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_vu3ll"]
+resource_local_to_scene = true
 particle_flag_disable_z = true
 gravity = Vector3(0, 0, 0)
+scale_min = 0.049999997
+scale_max = 0.14999999
 
-[node name="Node2D" type="Node2D" unique_id=1153217225]
+[sub_resource type="Curve2D" id="Curve2D_8kd8m"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, -41.13233, 5.9710274, 41.13233, -5.9710274, 58, -31, -31, -35, 31, 35, 130, -2)
+}
+point_count = 3
+
+[sub_resource type="Curve" id="Curve_fptwc"]
+_data = [Vector2(0, 0.1443299), 0.0, 0.0, 0, 0, Vector2(0.42748094, 0), -0.18627802, -0.18627802, 0, 0, Vector2(0.59923667, 0.98969066), 0.032939594, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ncnps"]
+
+[sub_resource type="Curve2D" id="Curve2D_fptwc"]
+_data = {
+"points": PackedVector2Array(-46.47239, 0.424098, 46.47239, -0.424098, -30, 6, -23.079609, 0, 23.079609, 0, 53, 2, -70.40019, 1.0939512, 70.40019, -1.0939512, 145, 12)
+}
+point_count = 3
+
+[sub_resource type="Curve" id="Curve_rrpon"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.3, 1), 0.032939594, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Curve2D" id="Curve2D_tdij5"]
+_data = {
+"points": PackedVector2Array(-23.079609, 0, 0, 0, -4, 8, 0, 0, 0, 0, 3, -6)
+}
+point_count = 2
+
+[node name="Node2D" type="Node2D" unique_id=1153217225 node_paths=PackedStringArray("fxs")]
+script = ExtResource("1_qcslt")
+fxs = [NodePath("hero_dummy/Slash FX"), NodePath("hero_dummy/Thrust FX"), NodePath("hero_dummy/Block FX")]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1718965872]
+zoom = Vector2(2, 2)
 
 [node name="Test VFX" type="Node2D" parent="." unique_id=400195651]
 position = Vector2(-248, -113)
+script = ExtResource("5_qt75m")
 
 [node name="GPUParent" type="Node2D" parent="Test VFX" unique_id=202733879]
 script = ExtResource("1_rrpon")
@@ -94,24 +141,111 @@ process_material = SubResource("ParticleProcessMaterial_2abwd")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Test VFX/GPUParent" unique_id=776660012]
 libraries/ = SubResource("AnimationLibrary_mr0xs")
 
-[node name="Path2D" type="Path2D" parent="Test VFX/GPUParent" unique_id=473768805]
-curve = ExtResource("4_qcslt")
+[node name="target_dummy" type="Sprite2D" parent="." unique_id=1317345572]
+position = Vector2(151, -1)
+texture = ExtResource("12_tdij5")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1718965872]
-zoom = Vector2(2, 2)
+[node name="hero_dummy" type="Sprite2D" parent="." unique_id=2030243763]
+texture = ExtResource("13_ptie1")
 
-[node name="Slash FX" type="Node2D" parent="." unique_id=1365036635]
+[node name="Slash FX" type="Node2D" parent="hero_dummy" unique_id=1365036635 node_paths=PackedStringArray("actionFXs", "target")]
 script = ExtResource("5_qt75m")
+actionFXs = [NodePath("VFXParent")]
+target = NodePath("../../target_dummy")
 
-[node name="VFXParent" type="Node2D" parent="Slash FX" unique_id=227950817]
+[node name="VFXParent" type="Node2D" parent="hero_dummy/Slash FX" unique_id=227950817 node_paths=PackedStringArray("vfx", "path")]
 script = ExtResource("6_8kd8m")
+vfx = NodePath("GPUParticles2D")
+t_graph = SubResource("Curve_tdij5")
+path = NodePath("Path2D/PathFollow2D")
+followRotations = true
+doHits = Array[float]([0.66])
 
-[node name="Sprite2D" type="Sprite2D" parent="Slash FX/VFXParent" unique_id=1180226718]
+[node name="Sprite2D" type="Sprite2D" parent="hero_dummy/Slash FX/VFXParent" unique_id=1180226718]
 scale = Vector2(2, 2)
 texture = ExtResource("6_tdij5")
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="Slash FX/VFXParent" unique_id=1547586243]
-material = SubResource("ShaderMaterial_ncnps")
+[node name="GPUParticles2D" type="GPUParticles2D" parent="hero_dummy/Slash FX/VFXParent" unique_id=1547586243]
+material = SubResource("CanvasItemMaterial_tdij5")
 position = Vector2(0, -6)
 texture = ExtResource("7_ptie1")
 process_material = SubResource("ParticleProcessMaterial_vu3ll")
+
+[node name="Path2D" type="Path2D" parent="hero_dummy/Slash FX/VFXParent" unique_id=1659785773]
+curve = SubResource("Curve2D_8kd8m")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="hero_dummy/Slash FX/VFXParent/Path2D" unique_id=287846649]
+position = Vector2(130, -2)
+rotation = 0.8459302
+progress = 151.85648
+loop = false
+
+[node name="Thrust FX" type="Node2D" parent="hero_dummy" unique_id=1011549045 node_paths=PackedStringArray("actionFXs", "target")]
+position = Vector2(9, 33)
+script = ExtResource("5_qt75m")
+actionFXs = [NodePath("VFXParent")]
+target = NodePath("../../target_dummy")
+
+[node name="VFXParent" type="Node2D" parent="hero_dummy/Thrust FX" unique_id=1986856431 node_paths=PackedStringArray("vfx", "path")]
+script = ExtResource("6_8kd8m")
+vfx = NodePath("GPUParticles2D")
+t_graph = SubResource("Curve_fptwc")
+path = NodePath("Path2D/PathFollow2D")
+followRotations = true
+doHits = Array[float]([0.66])
+
+[node name="Sprite2D" type="Sprite2D" parent="hero_dummy/Thrust FX/VFXParent" unique_id=1970778289]
+rotation = 1.5707964
+scale = Vector2(2, 2)
+texture = ExtResource("6_tdij5")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="hero_dummy/Thrust FX/VFXParent" unique_id=1160712318]
+material = SubResource("ShaderMaterial_ncnps")
+texture = ExtResource("8_8kd8m")
+process_material = SubResource("ParticleProcessMaterial_vu3ll")
+
+[node name="Path2D" type="Path2D" parent="hero_dummy/Thrust FX/VFXParent" unique_id=1014803692]
+position = Vector2(6, -6)
+curve = SubResource("Curve2D_fptwc")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="hero_dummy/Thrust FX/VFXParent/Path2D" unique_id=1280950429]
+position = Vector2(-30, 6)
+rotation = -0.009125553
+loop = false
+
+[node name="Block FX" type="Node2D" parent="hero_dummy" unique_id=965214044 node_paths=PackedStringArray("actionFXs", "target")]
+position = Vector2(-37, -9)
+script = ExtResource("5_qt75m")
+actionFXs = [NodePath("VFXParent")]
+target = NodePath("../../target_dummy")
+
+[node name="VFXParent" type="Node2D" parent="hero_dummy/Block FX" unique_id=1376184754 node_paths=PackedStringArray("vfx", "path")]
+position = Vector2(1, 0)
+script = ExtResource("6_8kd8m")
+vfx = NodePath("GPUParticles2D")
+t_graph = SubResource("Curve_rrpon")
+path = NodePath("Path2D/PathFollow2D")
+hasEffect = true
+doEffect = 0.3
+stopEffect = 1.0
+
+[node name="Sprite2D" type="Sprite2D" parent="hero_dummy/Block FX/VFXParent" unique_id=663374073]
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("10_qcslt")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="hero_dummy/Block FX/VFXParent" unique_id=1960908308]
+material = SubResource("ShaderMaterial_ncnps")
+texture = ExtResource("11_fptwc")
+process_material = SubResource("ParticleProcessMaterial_vu3ll")
+
+[node name="Path2D" type="Path2D" parent="hero_dummy/Block FX/VFXParent" unique_id=458562188]
+curve = SubResource("Curve2D_tdij5")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="hero_dummy/Block FX/VFXParent/Path2D" unique_id=539244832]
+position = Vector2(-4, 8)
+rotation = -1.1071488
+loop = false
+
+[connection signal="do_hit" from="hero_dummy/Slash FX/VFXParent" to="hero_dummy/Slash FX" method="_on_vfx_parent_do_hit"]
+[connection signal="do_hit" from="hero_dummy/Thrust FX/VFXParent" to="hero_dummy/Thrust FX" method="_on_vfx_parent_do_hit"]
+[connection signal="do_hit" from="hero_dummy/Block FX/VFXParent" to="hero_dummy/Block FX" method="_on_vfx_parent_do_hit"]
