@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://dub5mnj24ap5w"]
+
+[ext_resource type="Script" uid="uid://b6xoxxbgh3pot" path="res://Scripts/stage.gd" id="1_rx61o"]
+[ext_resource type="Texture2D" uid="uid://dhvpiayxv0j8c" path="res://Assets/Backgrounds/a275.png" id="1_w0uf1"]
+[ext_resource type="PackedScene" uid="uid://bvajt0sg0nnab" path="res://Scenes/Common/camera_ctrl.tscn" id="3_15lgv"]
+[ext_resource type="PackedScene" uid="uid://cc6kqjej56x5v" path="res://Scenes/GUI/timescale_presentation.tscn" id="3_vq4ys"]
+[ext_resource type="PackedScene" uid="uid://bgctmjw657jn3" path="res://Scenes/Common/time_modder.tscn" id="5_vq4ys"]
+[ext_resource type="Script" uid="uid://mvctbpc788uf" path="res://Scripts/combat_ui.gd" id="7_wbqx5"]
+[ext_resource type="PackedScene" uid="uid://c4lvieov5u1ol" path="res://Resources/Actions/action_selection.tscn" id="8_lt45x"]
+[ext_resource type="PackedScene" uid="uid://butvv85erthu0" path="res://Scenes/GUI/quick_selection.tscn" id="9_ahmxc"]
+[ext_resource type="PackedScene" uid="uid://c6yu0bkuawhee" path="res://Scenes/GUI/char_status.tscn" id="11_7oxfa"]
+
+[node name="TestStage" type="Node2D" unique_id=1586836765 node_paths=PackedStringArray("terrain", "entities", "camera", "combatUI")]
+script = ExtResource("1_rx61o")
+terrain = NodePath("Background")
+entities = NodePath("Entities")
+camera = NodePath("CameraCtrl")
+combatUI = NodePath("CombatUI")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1632606567]
+texture_filter = 1
+texture = ExtResource("1_w0uf1")
+
+[node name="Entities" type="Node2D" parent="." unique_id=2061748304]
+
+[node name="PPlacement" type="Marker2D" parent="Entities" unique_id=1644193527]
+position = Vector2(-67, 31)
+
+[node name="EPlacement" type="Marker2D" parent="Entities" unique_id=807866059]
+position = Vector2(67, 31)
+
+[node name="CameraCtrl" parent="." unique_id=1614862838 node_paths=PackedStringArray("focusTarget") instance=ExtResource("3_15lgv")]
+enabled = false
+zoom = Vector2(3, 3)
+focusTarget = NodePath("../Background")
+
+[node name="TimeModder" parent="." unique_id=245912603 instance=ExtResource("5_vq4ys")]
+key = 4194325
+
+[node name="CombatUI" type="Control" parent="." unique_id=774936282 node_paths=PackedStringArray("stage", "quickSelector", "classicSelector", "playerStatus", "enemyStatus")]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -192.0
+offset_top = -109.0
+offset_right = 193.0
+offset_bottom = 106.0
+script = ExtResource("7_wbqx5")
+stage = NodePath("..")
+quickSelector = NodePath("Control")
+classicSelector = NodePath("ActionSelection")
+playerStatus = NodePath("PlayerStatus")
+enemyStatus = NodePath("EnemyStatus")
+
+[node name="TSPresentation" parent="CombatUI" unique_id=609397377 instance=ExtResource("3_vq4ys")]
+layout_mode = 0
+offset_left = 133.0
+offset_top = 3.0
+offset_right = 233.0
+offset_bottom = 26.0
+
+[node name="ActionSelection" parent="CombatUI" unique_id=505950525 instance=ExtResource("8_lt45x")]
+custom_minimum_size = Vector2(170, 50)
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_top = 165.0
+offset_right = 170.0
+offset_bottom = 215.0
+grow_horizontal = 1
+grow_vertical = 1
+focus_mode = 1
+
+[node name="Control" parent="CombatUI" unique_id=1423943904 instance=ExtResource("9_ahmxc")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 321.0
+offset_top = 155.0
+offset_right = 377.0
+offset_bottom = 211.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="PlayerStatus" parent="CombatUI" unique_id=109587103 instance=ExtResource("11_7oxfa")]
+layout_mode = 1
+offset_left = 10.0
+offset_top = 11.0
+offset_right = 60.0
+offset_bottom = 49.0
+
+[node name="EnemyStatus" parent="CombatUI" unique_id=1405172015 instance=ExtResource("11_7oxfa")]
+layout_mode = 1
+offset_left = 324.0
+offset_top = 13.0
+offset_right = 374.0
+offset_bottom = 51.0

@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://c4lvieov5u1ol"]
 
-[ext_resource type="Script" uid="uid://b4eivsxko0sop" path="res://GUI/classic_action_selection.gd" id="1_jkmsa"]
+[ext_resource type="Script" uid="uid://b4eivsxko0sop" path="res://Scripts/classic_action_selection.gd" id="1_jkmsa"]
 [ext_resource type="Texture2D" uid="uid://dcw38ta7q3cip" path="res://Assets/Spirtes_extras/icon_missile_atlas.tres" id="2_jkmsa"]
 [ext_resource type="Texture2D" uid="uid://cg6hxl7fjtl7f" path="res://Assets/Spirtes_extras/icon_blast_atlas.tres" id="3_f2c56"]
 [ext_resource type="Texture2D" uid="uid://btd7rsqp6aeoi" path="res://Assets/Spirtes_extras/icon_beam_atlas.tres" id="4_f4uqm"]
-[ext_resource type="Script" uid="uid://baocp86hdtaqh" path="res://Util/action_list_selection.gd" id="6_b8lvt"]
+[ext_resource type="Script" uid="uid://baocp86hdtaqh" path="res://Scripts/Util/action_list_selection.gd" id="6_b8lvt"]
 
 [node name="ActionSelection" type="PanelContainer" unique_id=505950525]
 custom_minimum_size = Vector2(170, 0)

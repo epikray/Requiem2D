@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://1lecpiegyrff"]
+
+[ext_resource type="PackedScene" uid="uid://dotubx5ytddyi" path="res://Scenes/Levels/Fields/test_terrain.tscn" id="1_1c2mv"]
+[ext_resource type="Script" uid="uid://ctsimr8i7eyhk" path="res://Scripts/field.gd" id="1_ypbdo"]
+[ext_resource type="PackedScene" uid="uid://bytjkwqswwl50" path="res://Scenes/Entities/Field/Player/Test_Hero/test_hero_f.tscn" id="3_r7s42"]
+[ext_resource type="PackedScene" uid="uid://demtldlqpbfdw" path="res://Scenes/Entities/Field/Enemies/test_enemy_f.tscn" id="4_iljfm"]
+[ext_resource type="Script" uid="uid://bm1c250d30gwc" path="res://Scripts/Util/camera_controller.gd" id="5_iljfm"]
+
+[node name="TestField" type="Node2D" unique_id=787950061 node_paths=PackedStringArray("terrain", "entities", "camera")]
+script = ExtResource("1_ypbdo")
+terrain = NodePath("TestTileMap")
+entities = NodePath("Entities")
+camera = NodePath("CameraCtrl")
+
+[node name="TestTileMap" parent="." unique_id=1258981773 instance=ExtResource("1_1c2mv")]
+
+[node name="Entities" type="Node2D" parent="." unique_id=268200466]
+
+[node name="TestHero" parent="Entities" unique_id=1126827627 instance=ExtResource("3_r7s42")]
+position = Vector2(462, 417)
+
+[node name="TestMonster" parent="Entities" unique_id=28527835 instance=ExtResource("4_iljfm")]
+position = Vector2(667, 417)
+speed = 20.0
+
+[node name="CameraCtrl" type="Camera2D" parent="." unique_id=267107579 node_paths=PackedStringArray("focusTarget")]
+position = Vector2(564, 409)
+zoom = Vector2(2, 2)
+script = ExtResource("5_iljfm")
+focusTarget = NodePath("../Entities/TestHero")
+metadata/_custom_type_script = "uid://bm1c250d30gwc"

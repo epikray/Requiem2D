@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="CharDataRes" format=3 uid="uid://dfobe4i7dbntu"]
 
-[ext_resource type="Script" uid="uid://khk77soxlo2w" path="res://Objects/Actions/action.gd" id="1_knp3j"]
+[ext_resource type="Script" uid="uid://khk77soxlo2w" path="res://Scripts/Objects/Actions/action.gd" id="1_knp3j"]
 [ext_resource type="Resource" uid="uid://7nn3pukbln85" path="res://Resources/Actions/Slash.tres" id="2_isko3"]
-[ext_resource type="Script" uid="uid://c74rx366esm2m" path="res://Util/char_data_res.gd" id="3_0jj7w"]
+[ext_resource type="Script" uid="uid://c74rx366esm2m" path="res://Scripts/Util/char_data_res.gd" id="3_0jj7w"]
 [ext_resource type="Resource" uid="uid://be16xq4hvd32r" path="res://Resources/Actions/Slam.tres" id="3_yegl7"]
 [ext_resource type="Resource" uid="uid://b7xtvksk48u83" path="res://Resources/Actions/Thrust.tres" id="4_a2snt"]
 [ext_resource type="Resource" uid="uid://dxk2aidty4v0h" path="res://Resources/Actions/Block.tres" id="5_xv5ql"]
