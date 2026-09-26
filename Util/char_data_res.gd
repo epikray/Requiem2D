@@ -2,9 +2,8 @@ extends Resource
 class_name CharDataRes
 
 @export var char_name : String
-@export var actions : Array[Action]
-#@export var qs_actions : Array[Action]
-#@export var cs_actions : Array[Action]
+@export var def_actions : Dictionary[int, Action]
+@export var spec_actions : Array[Action]
 @export var health : int
 @export var stamina : int
 @export var strength : int
@@ -13,7 +12,8 @@ class_name CharDataRes
 func create_chardata() -> CharData :
 	var data = CharData.new()
 	data.char_name = char_name
-	data.actions = actions
+	data.def_actions = def_actions
+	data.spec_actions = spec_actions
 	
 	data.health = health
 	data.stamina = stamina

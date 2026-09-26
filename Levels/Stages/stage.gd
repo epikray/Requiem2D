@@ -33,6 +33,7 @@ func set_primary(enabled: bool) -> void:
 		process_mode = Node.PROCESS_MODE_DISABLED
 	pass
 
+# Entry point from outside
 func _on_field_begin_battle(player_team: Array[StageChar], enemy_team: Array[StageChar]) -> void:
 	for player_char in player_team:
 		entities.add_child(player_char)
@@ -56,6 +57,7 @@ func _on_field_begin_battle(player_team: Array[StageChar], enemy_team: Array[Sta
 	
 	combatUI.pcController = Playables[0].controller
 	combatUI.currentPC = Playables[0]
+	combatUI.pcController.enterState.connect(combatUI.switchState_PCtrl)
 	pass # Replace with function body.
 	
 func _resolve_battle_flee() -> void:

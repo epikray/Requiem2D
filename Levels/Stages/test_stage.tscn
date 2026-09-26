@@ -10,12 +10,11 @@
 [ext_resource type="PackedScene" uid="uid://butvv85erthu0" path="res://GUI/quick_selection.tscn" id="9_ahmxc"]
 [ext_resource type="PackedScene" uid="uid://c6yu0bkuawhee" path="res://GUI/char_status.tscn" id="11_7oxfa"]
 
-[node name="TestStage" type="Node2D" unique_id=1586836765 node_paths=PackedStringArray("terrain", "entities", "camera", "selMark", "combatUI")]
+[node name="TestStage" type="Node2D" unique_id=1586836765 node_paths=PackedStringArray("terrain", "entities", "camera", "combatUI")]
 script = ExtResource("1_rx61o")
 terrain = NodePath("Background")
 entities = NodePath("Entities")
 camera = NodePath("CameraCtrl")
-selMark = NodePath("")
 combatUI = NodePath("CombatUI")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1632606567]

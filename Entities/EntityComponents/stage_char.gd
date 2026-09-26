@@ -14,7 +14,9 @@ signal request_resolve_battle
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	controller.reqStageAction.connect(_handleActionRequest_DefaultAction)
+	controller.cDefaultAction.connect(_handleCommand_DefaultAction)
+	controller.cSpecialAction.connect(_handleCommand_SpecialAction)
+	controller.cNavTarget.connect(_handleCommand_NavTarget)
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -25,15 +27,17 @@ func _process(_delta: float) -> void:
 		sel_target = my_team[0]
 	pass
 	
-	if Input.is_action_just_pressed("confirm"):
-		print("%s attack %s using a %s, dealing %d damage" % [my_team[0], enemy_team[0], data.actions[0].name, data.actions[0].fakeDamage])
-	
 	if controller.ip_canc:
 		print("%s ran from battle" % my_team[0])
 		request_resolve_battle.emit()
 	pass
 	
-func _handleActionRequest_DefaultAction(num: int) -> void:
+func _handleCommand_DefaultAction(num: int) -> void:
+	print(name, " Doing default action ", num)
 	pass
 	
+func _handleCommand_SpecialAction(num: int) -> void:
+	print(name, " Doing Special action ", num)
 	
+func _handleCommand_NavTarget(dir : Vector2i) -> void:
+	print(name, " Moving targetting ", dir)
