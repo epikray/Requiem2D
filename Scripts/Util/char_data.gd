@@ -2,8 +2,9 @@ extends RefCounted
 class_name CharData
 
 var char_name : String
-var def_actions : Array[Action]
-var spec_actions : Array[Action]
+# At this point we should be dealing with instantiated Abilities
+var def_actions : Dictionary[int, Ability]
+#var spec_actions : Array[Action]
 var health : int
 var stamina : int
 var strength : int

@@ -17,6 +17,10 @@ func _ready() -> void:
 	controller.cDefaultAction.connect(_handleCommand_DefaultAction)
 	controller.cSpecialAction.connect(_handleCommand_SpecialAction)
 	controller.cNavTarget.connect(_handleCommand_NavTarget)
+	
+	for ablKey in data.def_actions:
+		# Orphaned nodes added to this node 
+		add_child(data.def_actions[ablKey]) 
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -34,7 +38,13 @@ func _process(_delta: float) -> void:
 	
 func _handleCommand_DefaultAction(num: int) -> void:
 	print(name, " Doing default action ", num)
-	# data.def_actions[num].execute(self, sel_target)
+	
+	if (data.def_actions.has(num)):
+		data.def_actions[num].execute(self, sel_target)
+		print(name, " Doing default ability ", num)
+	else :
+		print(name, " tried doing null ability ", num)	
+	
 	pass
 	
 func _handleCommand_SpecialAction(num: int) -> void:

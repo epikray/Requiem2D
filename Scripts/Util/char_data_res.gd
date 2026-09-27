@@ -2,18 +2,25 @@ extends Resource
 class_name CharDataRes
 
 @export var char_name : String
-@export var def_actions : Array[Action]
-@export var spec_actions : Array[Action]
+# not a fan. I want a PackedScene that I can guarantee has Ability as root Node 
+@export var def_actions : Dictionary[int, PackedScene] 
+#@export var spec_actions : Array[Ability]
 @export var health : int
 @export var stamina : int
 @export var strength : int
 @export var magic : int
 
 func create_chardata() -> CharData :
+	# Check that the scene can be used as an Ability
+	#for scene in def_actions:
+	#	pass
+	
 	var data = CharData.new()
 	data.char_name = char_name
-	data.def_actions = def_actions
-	data.spec_actions = spec_actions
+	for ablKey in def_actions:
+		data.def_actions[ablKey] = def_actions[ablKey].instantiate()
+		pass
+	#data.spec_actions = spec_actions
 	
 	data.health = health
 	data.stamina = stamina
