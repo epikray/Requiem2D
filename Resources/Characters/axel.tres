@@ -7,7 +7,6 @@
 [ext_resource type="Resource" uid="uid://b7xtvksk48u83" path="res://Resources/Actions/Thrust.tres" id="4_a2snt"]
 [ext_resource type="Resource" uid="uid://dxk2aidty4v0h" path="res://Resources/Actions/Block.tres" id="5_xv5ql"]
 [ext_resource type="Resource" uid="uid://bnceavol7h51y" path="res://Resources/Actions/Dodge.tres" id="6_xxujp"]
-[ext_resource type="Resource" uid="uid://dmso2w3s2jcvg" path="res://Resources/Actions/Parry.tres" id="7_yy23l"]
 [ext_resource type="Resource" uid="uid://b4wa4x7djqhu1" path="res://Resources/Actions/Bolt.tres" id="8_5cf1w"]
 [ext_resource type="Resource" uid="uid://ciehyx15lnbf1" path="res://Resources/Actions/Beam.tres" id="9_si14m"]
 [ext_resource type="Resource" uid="uid://be3lsxmt63q7q" path="res://Resources/Actions/Blast.tres" id="10_v51g2"]
@@ -15,5 +14,6 @@
 [resource]
 script = ExtResource("3_0jj7w")
 char_name = "Axel"
-actions = Array[ExtResource("1_knp3j")]([ExtResource("2_isko3"), ExtResource("3_yegl7"), ExtResource("4_a2snt"), ExtResource("5_xv5ql"), ExtResource("6_xxujp"), ExtResource("7_yy23l"), ExtResource("8_5cf1w"), ExtResource("9_si14m"), ExtResource("10_v51g2")])
+def_actions = Array[ExtResource("1_knp3j")]([null, null, ExtResource("6_xxujp"), ExtResource("3_yegl7"), ExtResource("5_xv5ql"), ExtResource("2_isko3"), ExtResource("4_a2snt"), ExtResource("6_xxujp"), null, null])
+spec_actions = Array[ExtResource("1_knp3j")]([ExtResource("8_5cf1w"), ExtResource("10_v51g2"), ExtResource("9_si14m")])
 metadata/_custom_type_script = "uid://c74rx366esm2m"

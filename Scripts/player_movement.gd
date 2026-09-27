@@ -3,7 +3,7 @@ extends CharacterBody2D
 enum MOVE_STATE {UP, DOWN, LEFT, RIGHT}
 
 @export var speed: float = 100
-@export var data: CharData
+#@export var data: CharData
 
 signal DEBUG_enter_stage;
 signal DEBUG_exit_stage;
@@ -11,7 +11,7 @@ var DEBUG_in_stage: bool = false;
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	print("Hello my name is %s!" % data.char_name)
+	#print("Hello my name is %s!" % data.char_name)
 	pass # Replace with function body.
 
 
