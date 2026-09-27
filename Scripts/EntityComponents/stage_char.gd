@@ -34,10 +34,15 @@ func _process(_delta: float) -> void:
 	
 func _handleCommand_DefaultAction(num: int) -> void:
 	print(name, " Doing default action ", num)
+	# data.def_actions[num].execute(self, sel_target)
 	pass
 	
 func _handleCommand_SpecialAction(num: int) -> void:
 	print(name, " Doing Special action ", num)
+	# Abilities grant actions. You need the *ability* "Slash" to do the *action* slash
+	# data.spec_actions[num].execute(self, sel_target)
 	
 func _handleCommand_NavTarget(dir : Vector2i) -> void:
 	print(name, " Moving targetting ", dir)
+	# Target selection is an 'ability' that can be turned off
+	# self.targetSelect.execute(self, sel_target, dir)
