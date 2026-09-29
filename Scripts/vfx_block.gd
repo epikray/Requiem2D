@@ -21,11 +21,10 @@ var initRotation : float
 @export_range(0, 1, 0.01) var stopEffect : float
 
 # signal ready
-signal done
+signal done(name: StringName)
 signal do_hit
 signal do_effect
 signal stop_effect
-
 
 # A FXblock is in state; Ready, Active, Done (<=> Ready)
 # It can be paused or canceled when needed.
@@ -43,6 +42,11 @@ func _ready() -> void:
 func start() -> void:
 	_switchState(state_FXB.RUNNING)
 	pass
+	
+func stop() -> void:
+	_switchState(state_FXB.DONE)
+	pass
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -67,6 +71,8 @@ func _switchState(new_state : state_FXB) -> void:
 			pass
 		state_FXB.RUNNING:
 			state = state_FXB.RUNNING
+			visible = true
+			vfx.restart()
 			pass
 		state_FXB.DONE:
 			done.emit()
@@ -75,6 +81,8 @@ func _switchState(new_state : state_FXB) -> void:
 	
 func _init() -> void:
 	state = state_FXB.READY
+	
+	visible = false
 	h_count = 0;
 	t = 0;
 	

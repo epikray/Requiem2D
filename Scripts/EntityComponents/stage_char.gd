@@ -17,6 +17,8 @@ func _ready() -> void:
 	controller.cDefaultAction.connect(_handleCommand_DefaultAction)
 	controller.cSpecialAction.connect(_handleCommand_SpecialAction)
 	controller.cNavTarget.connect(_handleCommand_NavTarget)
+	controller.cCancelAction.connect(_handleCommand_CancelAction)
+	controller.cTryFlee.connect(_handleCommand_TryFlee)
 	
 	for ablKey in data.def_actions:
 		# Orphaned nodes added to this node 
@@ -31,16 +33,13 @@ func _process(_delta: float) -> void:
 		sel_target = my_team[0]
 	pass
 	
-	if controller.ip_canc:
-		print("%s ran from battle" % my_team[0])
-		request_resolve_battle.emit()
 	pass
 	
 func _handleCommand_DefaultAction(num: int) -> void:
 	print(name, " Doing default action ", num)
 	
 	if (data.def_actions.has(num)):
-		data.def_actions[num].execute(self, sel_target)
+		data.def_actions[num].execute(self)
 		print(name, " Doing default ability ", num)
 	else :
 		print(name, " tried doing null ability ", num)	
@@ -56,3 +55,12 @@ func _handleCommand_NavTarget(dir : Vector2i) -> void:
 	print(name, " Moving targetting ", dir)
 	# Target selection is an 'ability' that can be turned off
 	# self.targetSelect.execute(self, sel_target, dir)
+	
+func _handleCommand_CancelAction() -> void:
+	# How do we cancel action in a clean way?
+	pass
+
+func _handleCommand_TryFlee() -> void:
+	print("%s ran from battle" % my_team[0])
+	request_resolve_battle.emit()
+	pass

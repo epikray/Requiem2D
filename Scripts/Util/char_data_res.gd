@@ -18,7 +18,11 @@ func create_chardata() -> CharData :
 	var data = CharData.new()
 	data.char_name = char_name
 	for ablKey in def_actions:
-		data.def_actions[ablKey] = def_actions[ablKey].instantiate()
+		var maybe_ability = def_actions[ablKey].instantiate()
+		if maybe_ability is Ability:
+			data.def_actions[ablKey] = maybe_ability
+		else:
+			printerr("CharData holds a scene assumed to be an Ability, it was not.")
 		pass
 	#data.spec_actions = spec_actions
 	

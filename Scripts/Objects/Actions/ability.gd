@@ -9,8 +9,11 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func execute(user: StageChar, target: StageChar) -> void:
+func execute(user: StageChar) -> void:
 	pass
 
 func _play() -> void:
+	pass
+
+func _stop() -> void:
 	pass

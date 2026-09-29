@@ -142,6 +142,10 @@ func _interpret_input_default() -> void:
 	
 	if (ip_conf) :
 		cDefaultAction.emit(hoveringSel)
+
+	if (ip_canc) :
+		cCancelAction.emit()	
+	
 	pass
 	
 func _interpret_input_classic() -> void:
@@ -152,6 +156,10 @@ func _interpret_input_classic() -> void:
 	prevSelMove = selMove
 	if (ip_conf) :
 		cSpecialAction.emit(cSel)
+	
+	if (ip_canc) :
+		cClearActionQueue.emit(1)
+		
 	pass
 	
 func _interpret_input_targetting() -> void:
@@ -159,5 +167,8 @@ func _interpret_input_targetting() -> void:
 	if (targMove != prevTargMove and targMove != Vector2i(0,0)): 
 		cNavTarget.emit(targMove)
 	prevTargMove = targMove	
+	
+	if (ip_canc):
+		cTryFlee.emit()
 	pass
 	

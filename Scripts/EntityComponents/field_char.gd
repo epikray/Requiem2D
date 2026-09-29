@@ -53,12 +53,12 @@ func _sig_begin_battle(subject: FieldChar) -> void:
 	
 	pass
 	
-func _sig_begin_battle_first_action(subject: FieldChar, first_action: Action) -> void:
+func _sig_begin_battle_first_action(subject: FieldChar) -> void:
 	if !subject:
 		push_warning("%s signaled begin_battle without subject!" % subject.name)
 		return
 
-	print("%s begin_battle with %s starting action %s" % [self.name, subject.name, first_action.name])
-	request_battle.emit(self, subject, first_action)
+	print("%s begin_battle with %s starting action %s" % [self.name, subject.name])
+	request_battle.emit(self, subject)
 
 	pass

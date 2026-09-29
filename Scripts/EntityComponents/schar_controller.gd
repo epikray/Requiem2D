@@ -14,4 +14,7 @@ var i_canc : bool
 
 signal cDefaultAction(num : int)
 signal cSpecialAction(num : int)
+signal cClearActionQueue(num : int)
 signal cNavTarget(dir : Vector2i)
+signal cCancelAction
+signal cTryFlee
