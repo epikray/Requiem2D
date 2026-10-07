@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://dgnm6gfyx8vyn" path="res://Assets/Spirtes_extras/test_shield.png" id="12_qqy4f"]
 [ext_resource type="Texture2D" uid="uid://wrl2opvbwb8h" path="res://Assets/Kenny_Particles/kenney_particle_pack/circle_04.png" id="13_dqkrq"]
 [ext_resource type="PackedScene" uid="uid://b6t6mh37xttma" path="res://Scenes/Abilities/slash.tscn" id="13_wn5sm"]
+[ext_resource type="Texture2D" uid="uid://dna2jwdloirmm" path="res://Assets/Spirtes_extras/icon_slash_atlas.tres" id="14_ymgai"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_2abwd"]
 particles_animation = true
@@ -204,6 +205,8 @@ loop = false
 
 [node name="Slash" parent="hero_dummy" unique_id=460029362 instance=ExtResource("13_wn5sm")]
 position = Vector2(20, 0)
+proper_name = "Slash"
+icon = ExtResource("14_ymgai")
 
 [connection signal="do_hit" from="hero_dummy/Thrust FX/VFXParent" to="hero_dummy/Thrust FX" method="_on_vfx_parent_do_hit"]
 [connection signal="do_hit" from="hero_dummy/Block FX/VFXParent" to="hero_dummy/Block FX" method="_on_vfx_parent_do_hit"]
