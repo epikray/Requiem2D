@@ -3,7 +3,8 @@ extends Node2D
 
 @export var controller : SCharController
 @export var view : CharView
-var data: CharData
+@export var dataRes: CharDataRes
+var data = CharData
 
 var my_team : Array[StageChar] 
 var enemy_team : Array[StageChar] 
@@ -14,6 +15,7 @@ signal request_resolve_battle
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	data = dataRes.get_instance()
 	controller.cDefaultAction.connect(_handleCommand_DefaultAction)
 	controller.cSpecialAction.connect(_handleCommand_SpecialAction)
 	controller.cNavTarget.connect(_handleCommand_NavTarget)

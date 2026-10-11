@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cogbef5qtsoe6" path="res://Scripts/EntityComponents/stage_char.gd" id="1_b5xxd"]
 [ext_resource type="Texture2D" uid="uid://d2ln1ywdrhaet" path="res://Assets/Spritesheet_chars/hero_gen_sword.png" id="1_fpa7l"]
+[ext_resource type="Resource" uid="uid://dfobe4i7dbntu" path="res://Resources/Characters/axel.tres" id="2_jugl4"]
 [ext_resource type="Script" uid="uid://c616inraeljtg" path="res://Scripts/EntityComponents/char_view.gd" id="2_yrxtc"]
 [ext_resource type="Script" uid="uid://bkwi0hp1niof8" path="res://Scripts/EntityComponents/schar_controller_p.gd" id="4_yrxtc"]
 
@@ -9,6 +10,7 @@
 script = ExtResource("1_b5xxd")
 controller = NodePath("SCharController_P")
 view = NodePath("CharView")
+dataRes = ExtResource("2_jugl4")
 
 [node name="SCharController_P" type="Node2D" parent="." unique_id=1678936040]
 script = ExtResource("4_yrxtc")

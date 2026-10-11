@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dr2w56gf7d58o" path="res://Assets/Spirtes_extras/icon_block_atlas.tres" id="4_b73f7"]
 [ext_resource type="Texture2D" uid="uid://cjut0y3wojmkm" path="res://Assets/Spirtes_extras/icon_thrust_atlas.tres" id="4_koaif"]
 
-[node name="Control" type="GridContainer" unique_id=1423943904 node_paths=PackedStringArray("pan1", "pan2", "pan3", "pan4", "pan5", "pan6", "pan7", "pan8", "pan9")]
+[node name="Control" type="GridContainer" unique_id=1423943904 node_paths=PackedStringArray("buttons")]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -15,85 +15,55 @@ grow_horizontal = 2
 grow_vertical = 2
 columns = 3
 script = ExtResource("1_w838j")
-pan1 = NodePath("Panel")
-pan2 = NodePath("Panel2")
-pan3 = NodePath("Panel3")
-pan4 = NodePath("Panel4")
-pan5 = NodePath("Panel5")
-pan6 = NodePath("Panel6")
-pan7 = NodePath("Panel7")
-pan8 = NodePath("Panel8")
-pan9 = NodePath("Panel9")
+buttons = {
+1: NodePath("Button1"),
+2: NodePath("Button2"),
+3: NodePath("Button3"),
+4: NodePath("Button4"),
+5: NodePath("Button5"),
+6: NodePath("Button6"),
+7: NodePath("Button7"),
+8: NodePath("Button8"),
+9: NodePath("Button9")
+}
 
-[node name="Panel" type="Panel" parent="." unique_id=1578451093]
-custom_minimum_size = Vector2(16, 16)
-layout_mode = 2
-focus_mode = 2
-
-[node name="Panel2" type="Panel" parent="." unique_id=1780303183]
-custom_minimum_size = Vector2(16, 16)
+[node name="Button1" type="Button" parent="." unique_id=811394288]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="Panel2" unique_id=1017808039]
-layout_mode = 0
-offset_right = 16.0
-offset_bottom = 16.0
-texture = ExtResource("2_koaif")
-
-[node name="Panel3" type="Panel" parent="." unique_id=1752989746]
+[node name="Button2" type="Button" parent="." unique_id=1304031897]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
+icon = ExtResource("2_koaif")
 
-[node name="TextureRect" type="TextureRect" parent="Panel3" unique_id=971941399]
-layout_mode = 0
-offset_right = 16.0
-offset_bottom = 16.0
-texture = ExtResource("2_wc2ug")
-
-[node name="Panel4" type="Panel" parent="." unique_id=1754519619]
+[node name="Button3" type="Button" parent="." unique_id=481715392]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
+icon = ExtResource("2_wc2ug")
 
-[node name="TextureRect" type="TextureRect" parent="Panel4" unique_id=1477486198]
-layout_mode = 0
-offset_right = 16.0
-offset_bottom = 16.0
-texture = ExtResource("4_b73f7")
-
-[node name="Panel5" type="Panel" parent="." unique_id=182131200]
+[node name="Button4" type="Button" parent="." unique_id=1301255472]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
+icon = ExtResource("4_b73f7")
 
-[node name="TextureRect" type="TextureRect" parent="Panel5" unique_id=1784213888]
-layout_mode = 0
-offset_right = 16.0
-offset_bottom = 16.0
-texture = ExtResource("3_y017l")
+[node name="Button5" type="Button" parent="." unique_id=918654682]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+icon = ExtResource("3_y017l")
 
-[node name="Panel6" type="Panel" parent="." unique_id=1420728658]
+[node name="Button6" type="Button" parent="." unique_id=427645275]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+icon = ExtResource("4_koaif")
+
+[node name="Button7" type="Button" parent="." unique_id=287374571]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+icon = ExtResource("2_koaif")
+
+[node name="Button8" type="Button" parent="." unique_id=1603679980]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="Panel6" unique_id=974954527]
-layout_mode = 0
-offset_right = 16.0
-offset_bottom = 16.0
-texture = ExtResource("4_koaif")
-
-[node name="Panel7" type="Panel" parent="." unique_id=1060070117]
-custom_minimum_size = Vector2(16, 16)
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="Panel7" unique_id=1912455796]
-layout_mode = 0
-offset_right = 16.0
-offset_bottom = 16.0
-texture = ExtResource("2_koaif")
-
-[node name="Panel8" type="Panel" parent="." unique_id=1575260011]
-custom_minimum_size = Vector2(16, 16)
-layout_mode = 2
-
-[node name="Panel9" type="Panel" parent="." unique_id=1060107854]
+[node name="Button9" type="Button" parent="." unique_id=1092345107]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2

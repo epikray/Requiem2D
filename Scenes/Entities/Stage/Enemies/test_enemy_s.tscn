@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cogbef5qtsoe6" path="res://Scripts/EntityComponents/stage_char.gd" id="1_kn1mj"]
 [ext_resource type="Texture2D" uid="uid://bs8nbrp2hsatn" path="res://Scenes/Entities/Field/Enemies/TestMonster/Spritesheet_monsters/DevSlimeEnemy.png" id="1_ntxwo"]
+[ext_resource type="Resource" uid="uid://drqwkocufocyh" path="res://Resources/Characters/test_enemy.tres" id="2_2ipo4"]
 [ext_resource type="Script" uid="uid://c616inraeljtg" path="res://Scripts/EntityComponents/char_view.gd" id="2_23av0"]
 [ext_resource type="Script" uid="uid://csx1kuxgq701k" path="res://Scripts/EntityComponents/schar_controller_np.gd" id="4_lheg1"]
 
@@ -9,6 +10,7 @@
 script = ExtResource("1_kn1mj")
 controller = NodePath("SCharController_NP")
 view = NodePath("CharView")
+dataRes = ExtResource("2_2ipo4")
 
 [node name="SCharController_NP" type="Node2D" parent="." unique_id=859510794]
 script = ExtResource("4_lheg1")

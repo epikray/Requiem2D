@@ -10,7 +10,17 @@ class_name CharDataRes
 @export var strength : int
 @export var magic : int
 
-func create_chardata() -> CharData :
+var inst : CharData
+
+func get_instance() -> CharData : 
+	if not inst:
+		inst = _create_chardata()
+		
+		
+	return inst
+pass
+
+func _create_chardata() -> CharData :
 	# Check that the scene can be used as an Ability
 	#for scene in def_actions:
 	#	pass

@@ -2,5 +2,5 @@ extends RefCounted
 class_name CharDataProcessor
 
 
-func handleAction(action: Action, data: CharData) -> void :
+func handleAction(action, data: CharData) -> void :
 	pass

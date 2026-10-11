@@ -6,7 +6,7 @@ extends CharacterBody2D
 @export var dataRes: CharDataRes
 @export var stageRep: PackedScene
 
-@onready var data: CharData = dataRes.create_chardata()
+@onready var data: CharData = dataRes.get_instance()
 ## TODO: this will be gathered from CharData
 @export var speed: float = 100
 
@@ -14,11 +14,10 @@ signal request_battle(calller: FieldChar, subject: FieldChar)
 
 func create_stagerep() -> StageChar:
 	var rep = stageRep.instantiate()
-	rep.data = data
 	return rep
 
 func _enter_tree() -> void:
-	data = dataRes.create_chardata()
+	data = dataRes.get_instance()
 	pass
 
 # Called when the node enters the scene tree for the first time.

@@ -1,24 +1,38 @@
 class_name QuickSelection
 extends GridContainer
 
-@export var pan1 : Control
-@export var pan2 : Control
-@export var pan3 : Control
-@export var pan4 : Control
-@export var pan5 : Control
-@export var pan6 : Control
-@export var pan7 : Control
-@export var pan8 : Control
-@export var pan9 : Control
+# Doesn't have to be an Ability Array, anything with a displayable and executable interface is good
+@export var abilities : Dictionary[int, Ability]
+	
+@export var buttons : Dictionary[int, Button]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	populate_grid(abilities)
 	visible = true
 	pass # Replace with function body.
 
+func anon_arg(anon_object) -> void:
+	if anon_object.has_method("MadeUpMethod"):
+		anon_object.MadeUpMethod()
+	#if anon_object.has_
+	anon_object.MadeUpParam = "Kalle Anka"
+	pass	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	pass
+	
+func populate_grid(inAbilities : Dictionary[int, Ability]) -> void:
+	for idButton in buttons:
+		if abilities.has(idButton):
+			buttons[idButton].icon = abilities[idButton].icon
+		else:
+			buttons[idButton].icon = null
+	pass
+
+func _activation_to_stagechar(idx: int) -> void:
+	print("Selected action ", abilities[idx])
 	pass
 	
 # Spamming grab_focus might not be 'healthy'.
