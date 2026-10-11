@@ -28,7 +28,8 @@ func populate_grid(inAbilities : Dictionary[int, Ability]) -> void:
 		if abilities.has(idButton):
 			buttons[idButton].icon = abilities[idButton].icon
 		else:
-			buttons[idButton].icon = null
+			#buttons[idButton].icon = null
+			pass
 	pass
 
 func _activation_to_stagechar(idx: int) -> void:

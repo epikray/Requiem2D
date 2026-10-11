@@ -44,6 +44,7 @@ func view_stage() -> void:
 
 func _on_begin_battle(player_team: Array[StageChar], enemy_team: Array[StageChar]) -> void:
 	view_stage()
+	Global.main.change_gui_scene(Global.uiCombat)
 	pass # Replace with function body.
 
 

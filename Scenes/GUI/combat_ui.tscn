@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://bfs0r1g31mihx"]
+
+[ext_resource type="Script" uid="uid://mvctbpc788uf" path="res://Scripts/combat_ui.gd" id="1_xx23l"]
+[ext_resource type="PackedScene" uid="uid://cc6kqjej56x5v" path="res://Scenes/GUI/timescale_presentation.tscn" id="2_ccvhh"]
+[ext_resource type="PackedScene" uid="uid://c4lvieov5u1ol" path="res://Resources/Actions/action_selection.tscn" id="3_7hpkl"]
+[ext_resource type="PackedScene" uid="uid://butvv85erthu0" path="res://Scenes/GUI/quick_selection.tscn" id="4_04meg"]
+[ext_resource type="PackedScene" uid="uid://c6yu0bkuawhee" path="res://Scenes/GUI/char_status.tscn" id="5_dwk08"]
+
+[node name="CombatUI" type="Control" unique_id=74772315 node_paths=PackedStringArray("stage", "quickSelector", "classicSelector", "playerStatus", "enemyStatus")]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -192.0
+offset_top = -109.0
+offset_right = 193.0
+offset_bottom = 106.0
+script = ExtResource("1_xx23l")
+stage = NodePath("")
+quickSelector = NodePath("Control")
+classicSelector = NodePath("ActionSelection")
+playerStatus = NodePath("PlayerStatus")
+enemyStatus = NodePath("EnemyStatus")
+
+[node name="TSPresentation" parent="." unique_id=825801591 instance=ExtResource("2_ccvhh")]
+layout_mode = 0
+offset_left = 133.0
+offset_top = 3.0
+offset_right = 233.0
+offset_bottom = 26.0
+
+[node name="ActionSelection" parent="." unique_id=505950525 instance=ExtResource("3_7hpkl")]
+custom_minimum_size = Vector2(170, 50)
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_top = 165.0
+offset_right = 170.0
+offset_bottom = 215.0
+grow_horizontal = 1
+grow_vertical = 1
+focus_mode = 1
+
+[node name="Control" parent="." unique_id=1423943904 node_paths=PackedStringArray("buttons") instance=ExtResource("4_04meg")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 321.0
+offset_top = 155.0
+offset_right = 377.0
+offset_bottom = 211.0
+grow_horizontal = 1
+grow_vertical = 1
+buttons = {
+1: NodePath(""),
+2: NodePath(""),
+3: NodePath(""),
+4: NodePath(""),
+5: NodePath(""),
+6: NodePath(""),
+7: NodePath(""),
+8: NodePath(""),
+9: NodePath("")
+}
+
+[node name="PlayerStatus" parent="." unique_id=109587103 instance=ExtResource("5_dwk08")]
+layout_mode = 1
+offset_left = 10.0
+offset_top = 11.0
+offset_right = 60.0
+offset_bottom = 49.0
+
+[node name="EnemyStatus" parent="." unique_id=1891948738 instance=ExtResource("5_dwk08")]
+layout_mode = 1
+offset_left = 324.0
+offset_top = 13.0
+offset_right = 374.0
+offset_bottom = 51.0

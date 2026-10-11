@@ -5,6 +5,11 @@ var data : DataScene
 var fplayer : Node2D
 var splayer : Node2D
 
+@onready var uiCombat = "res://Scenes/GUI/combat_ui.tscn"
+
+@onready var lTest = "res://Scenes/Levels/test_level.tscn"
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	

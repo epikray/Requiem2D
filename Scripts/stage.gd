@@ -9,7 +9,6 @@ extends Node2D
 @export var camera : CameraCtrl
 
 @export var selMark : SelectionMarker
-@export var combatUI : CombatUIController
 
 var Enemies : Array[StageChar]
 var Playables : Array[StageChar]
