@@ -54,9 +54,9 @@ func _on_field_begin_battle(player_team: Array[StageChar], enemy_team: Array[Sta
 		enemy_char.my_team = Enemies
 		enemy_char.enemy_team = Playables
 	
-	combatUI.pcController = Playables[0].controller
-	combatUI.currentPC = Playables[0]
-	combatUI.pcController.enterState.connect(combatUI.switchState_PCtrl)
+#	combatUI.pcController = Playables[0].controller
+#	combatUI.currentPC = Playables[0]
+#	combatUI.pcController.enterState.connect(combatUI.switchState_PCtrl)
 	pass # Replace with function body.
 	
 func _resolve_battle_flee() -> void:

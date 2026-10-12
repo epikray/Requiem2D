@@ -5,12 +5,11 @@
 [ext_resource type="PackedScene" uid="uid://bvajt0sg0nnab" path="res://Scenes/Common/camera_ctrl.tscn" id="3_15lgv"]
 [ext_resource type="PackedScene" uid="uid://bgctmjw657jn3" path="res://Scenes/Common/time_modder.tscn" id="5_vq4ys"]
 
-[node name="TestStage" type="Node2D" unique_id=1586836765 node_paths=PackedStringArray("terrain", "entities", "camera", "combatUI")]
+[node name="TestStage" type="Node2D" unique_id=1586836765 node_paths=PackedStringArray("terrain", "entities", "camera")]
 script = ExtResource("1_rx61o")
 terrain = NodePath("Background")
 entities = NodePath("Entities")
 camera = NodePath("CameraCtrl")
-combatUI = NodePath("")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1632606567]
 texture_filter = 1

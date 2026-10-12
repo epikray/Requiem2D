@@ -1,7 +1,7 @@
 class_name MainScene extends Node
 
 @export var world_2d : Node2D
-@export var gui : Control
+@export var hud : CanvasLayer
 
 var curr_2d_scene : Node2D
 var curr_gui_scene : Control
@@ -17,8 +17,8 @@ func _ready() -> void:
 	if world_2d.get_child_count() != 0 : 
 		curr_2d_scene = world_2d.get_child(0)
 		
-	if gui.get_child_count() != 0 : 
-		curr_gui_scene = gui.get_child(0)
+	if hud.get_child_count() != 0 : 
+		curr_gui_scene = hud.get_child(0)
 		
 	pass # Replace with function body.
 
@@ -60,9 +60,9 @@ func change_gui_scene(scene_path : String, delete : bool = true, keep_running : 
 		elif keep_running : 
 			curr_gui_scene.visible = false # Hides previous scene. NOTE: MainScene will 'forget' about this scene while its still active
 		else :
-			gui.remove_child(curr_gui_scene)
+			hud.remove_child(curr_gui_scene)
 	var new = load(scene_path).instantiate()
-	gui.add_child(new)
+	hud.add_child(new)
 	curr_gui_scene = new	
 	pass
 	
@@ -73,7 +73,13 @@ func remove_gui_scene(delete : bool = true, keep_running : bool = false) -> void
 		elif keep_running : 
 			curr_gui_scene.visible = false # Hides previous scene. NOTE: MainScene will 'forget' about this scene while its still active
 		else :
-			gui.remove_child(curr_gui_scene)	
+			hud.remove_child(curr_gui_scene)	
 		curr_gui_scene = null
 	pass
 	
+
+func inject_dep_gui(object: Object) -> void:
+	var objClass_s = object.get_class()
+	#curr_2d_scene
+	
+	pass

@@ -1,6 +1,7 @@
 extends Node
 
 var main : MainScene
+var hud : MainHud
 var data : DataScene
 var fplayer : Node2D
 var splayer : Node2D
@@ -40,6 +41,16 @@ func get_player_stage() -> Node2D:
 				return splayer
 	return null
 pass	
+
+func change_gui_scene(scene_path : String, delete : bool = true, keep_running : bool = false) -> void:
+	if main:
+		main.change_gui_scene(scene_path, delete, keep_running)
+	pass
+	
+func change_2d_scene(scene_path : String, delete : bool = true, keep_running : bool = false) -> void:
+	if main:
+		main.change_2d_scene(scene_path, delete, keep_running)
+	pass
 
 func set_main(s :MainScene) -> void:
 	if main == null:

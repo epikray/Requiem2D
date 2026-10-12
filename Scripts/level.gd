@@ -24,7 +24,7 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	pass
 
-# Switch from stage to field
+# TODO: Why do we have this and on_resolve_battle
 func _on_battle_resolve() -> void:
 	view_field()
 	pass
@@ -44,11 +44,13 @@ func view_stage() -> void:
 
 func _on_begin_battle(player_team: Array[StageChar], enemy_team: Array[StageChar]) -> void:
 	view_stage()
-	Global.main.change_gui_scene(Global.uiCombat)
+	# TODO change to a signal up mechanism instead
+	Global.change_gui_scene(Global.uiCombat)
+	Global.inject_dep_gui()
 	pass # Replace with function body.
 
 
-# TODO: This is 
+
 func _on_resovle_battle() -> void:
 	view_field()
 	pass # Replace with function body.
