@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bdndyhjjyv8ur" path="res://Scripts/Util/main.gd" id="1_6l7je"]
 [ext_resource type="PackedScene" uid="uid://dypg2fqho764r" path="res://Scenes/GUI/main_menu.tscn" id="1_52fb6"]
 [ext_resource type="Script" uid="uid://cq17jlg0p7elv" path="res://Scripts/main_hud.gd" id="2_jv6wh"]
+[ext_resource type="PackedScene" uid="uid://bfs0r1g31mihx" path="res://Scenes/GUI/combat_ui.tscn" id="4_x6ack"]
 
 [node name="MainScene" type="Node" unique_id=1648539419 node_paths=PackedStringArray("world_2d", "hud")]
 script = ExtResource("1_6l7je")
@@ -16,5 +17,8 @@ script = ExtResource("2_jv6wh")
 
 [node name="MainMenu" parent="HUD" unique_id=769091772 instance=ExtResource("1_52fb6")]
 unique_name_in_owner = true
+
+[node name="CombatUI" parent="HUD" unique_id=74772315 instance=ExtResource("4_x6ack")]
+visible = false
 
 [connection signal="new_game_select" from="HUD/MainMenu" to="." method="_on_main_menu_new_game_select"]
