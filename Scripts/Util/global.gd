@@ -1,5 +1,8 @@
 extends Node
 
+
+
+
 var main : MainScene
 var hud : MainHud
 var data : DataScene
@@ -47,6 +50,7 @@ func change_gui_scene(scene_path : String, delete : bool = true, keep_running : 
 		main.change_gui_scene(scene_path, delete, keep_running)
 	pass
 	
+## This is no good anymore. Use MainHud.setHUD(Global.HUD)
 func change_2d_scene(scene_path : String, delete : bool = true, keep_running : bool = false) -> void:
 	if main:
 		main.change_2d_scene(scene_path, delete, keep_running)
@@ -62,6 +66,18 @@ func set_data(s :DataScene) -> void:
 		data = s
 pass
 
+func enable(node : CanvasItem) -> void: 
+	if (not node):
+		return
+	node.visible = true
+	node.set_process(true)
+
+func disable(node : CanvasItem) -> void: 
+	if (not node):
+		return
+	node.visible = false
+	node.set_process(false)
+	
 # TODO: 
 #func get_player() -> Node2D:
 #	return null;

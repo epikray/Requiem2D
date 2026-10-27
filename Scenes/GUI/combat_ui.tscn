@@ -6,15 +6,14 @@
 [ext_resource type="PackedScene" uid="uid://butvv85erthu0" path="res://Scenes/GUI/quick_selection.tscn" id="4_04meg"]
 [ext_resource type="PackedScene" uid="uid://c6yu0bkuawhee" path="res://Scenes/GUI/char_status.tscn" id="5_dwk08"]
 
-[node name="CombatUI" type="Control" unique_id=74772315 node_paths=PackedStringArray("stage", "quickSelector", "classicSelector", "playerStatus", "enemyStatus")]
+[node name="CombatUI" type="Control" unique_id=74772315 node_paths=PackedStringArray("quickSelector", "classicSelector", "playerStatus", "enemyStatus")]
 layout_mode = 3
-anchors_preset = 0
-offset_left = -192.0
-offset_top = -109.0
-offset_right = 193.0
-offset_bottom = 106.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_xx23l")
-stage = NodePath("")
 quickSelector = NodePath("Control")
 classicSelector = NodePath("ActionSelection")
 playerStatus = NodePath("PlayerStatus")
@@ -52,15 +51,15 @@ offset_bottom = 211.0
 grow_horizontal = 1
 grow_vertical = 1
 buttons = {
-1: NodePath(""),
-2: NodePath(""),
-3: NodePath(""),
-4: NodePath(""),
-5: NodePath(""),
-6: NodePath(""),
-7: NodePath(""),
-8: NodePath(""),
-9: NodePath("")
+1: null,
+2: null,
+3: null,
+4: null,
+5: null,
+6: null,
+7: null,
+8: null,
+9: null
 }
 
 [node name="PlayerStatus" parent="." unique_id=109587103 instance=ExtResource("5_dwk08")]

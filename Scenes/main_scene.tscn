@@ -12,8 +12,10 @@ hud = NodePath("HUD")
 
 [node name="World2D" type="Node2D" parent="." unique_id=2669119]
 
-[node name="HUD" type="CanvasLayer" parent="." unique_id=622356846]
+[node name="HUD" type="CanvasLayer" parent="." unique_id=622356846 node_paths=PackedStringArray("mainMenu", "combatHUD")]
 script = ExtResource("2_jv6wh")
+mainMenu = NodePath("MainMenu")
+combatHUD = NodePath("CombatUI")
 
 [node name="MainMenu" parent="HUD" unique_id=769091772 instance=ExtResource("1_52fb6")]
 unique_name_in_owner = true

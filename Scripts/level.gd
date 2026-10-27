@@ -43,14 +43,16 @@ func view_stage() -> void:
 
 
 func _on_begin_battle(player_team: Array[StageChar], enemy_team: Array[StageChar]) -> void:
+	Global.hud.setHUD(MainHud.HUD.combat)
 	view_stage()
 	# TODO change to a signal up mechanism instead
-	Global.change_gui_scene(Global.uiCombat)
-	Global.inject_dep_gui()
+	
+	#Global.inject_dep_gui()
 	pass # Replace with function body.
 
 
 
 func _on_resovle_battle() -> void:
+	Global.hud.setHUD(MainHud.HUD.field)
 	view_field()
 	pass # Replace with function body.

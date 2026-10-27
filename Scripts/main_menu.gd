@@ -22,5 +22,5 @@ func load_level() -> void:
 # Is it even worth when it is going to only one 
 func _on_new_game_button_pressed() -> void:
 	Global.main.change_2d_scene("res://Scenes/Levels/test_level.tscn")
-	Global.main.remove_gui_scene()
+	Global.hud.setHUD(MainHud.HUD.field)
 	pass # Replace with function body.

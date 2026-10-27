@@ -12,6 +12,8 @@ extends Control
 @export var playerStatus : CharStatus
 @export var enemyStatus : CharStatus
 
+var hState : MainHud.HudState
+
 var currentPC : StageChar
 var focusedNPC: StageChar
 
@@ -25,6 +27,9 @@ func _ready() -> void:
 	classicSelector.visible = false
 	pass # Replace with function body.
 
+func initGUI() -> void:
+	hState = Global.hud.state
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

@@ -1,7 +1,7 @@
 class_name MainScene extends Node
 
 @export var world_2d : Node2D
-@export var hud : CanvasLayer
+@export var hud : MainHud
 
 var curr_2d_scene : Node2D
 var curr_gui_scene : Control
@@ -51,8 +51,7 @@ func remove_2d_scene(delete : bool = true, keep_running : bool = false) -> void 
 		curr_2d_scene = null
 	pass
 	
-
-	
+## This is no good, it will brick MainHud if delete is true. Use MainHud.setHUD(Global.HUD)
 func change_gui_scene(scene_path : String, delete : bool = true, keep_running : bool = false) -> void : 
 	if curr_gui_scene != null : 
 		if delete :
@@ -66,6 +65,7 @@ func change_gui_scene(scene_path : String, delete : bool = true, keep_running : 
 	curr_gui_scene = new	
 	pass
 	
+## This WILL brick MainHud. Use MainHud.setHUD(Global.HUD)
 func remove_gui_scene(delete : bool = true, keep_running : bool = false) -> void :
 	if curr_gui_scene != null:
 		if delete :
@@ -75,11 +75,4 @@ func remove_gui_scene(delete : bool = true, keep_running : bool = false) -> void
 		else :
 			hud.remove_child(curr_gui_scene)	
 		curr_gui_scene = null
-	pass
-	
-
-func inject_dep_gui(object: Object) -> void:
-	var objClass_s = object.get_class()
-	#curr_2d_scene
-	
 	pass
