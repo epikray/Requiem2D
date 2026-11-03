@@ -15,6 +15,10 @@ signal request_resolve_battle
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	# TODO: Eh... icky but its hard to get around it.
+	if controller is SCharController_P:
+		Global.hud.state.focusedPlayer = self
+	
 	data = dataRes.get_instance()
 	controller.cDefaultAction.connect(_handleCommand_DefaultAction)
 	controller.cSpecialAction.connect(_handleCommand_SpecialAction)

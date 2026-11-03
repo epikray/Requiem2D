@@ -2,12 +2,12 @@ extends CanvasLayer
 class_name MainHud
 
 class HudState:
+	# TODO: Getters that automatically logs error if member is null
 	var playerController : SCharController_P
 	
 	var focusedPlayer : StageChar
 	var players: Array[StageChar]
 	
-	var focusedEnemy : StageChar
 	var enemies: Array[StageChar]
 
 enum HUD {mainMenu, field, combat} 
@@ -18,10 +18,13 @@ enum HUD {mainMenu, field, combat}
 @export var fieldHUD : Control
 @export var combatHUD : Control
 var currHUD : Control
-var state : HudState
+@onready var state : HudState
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	
+	state = HudState.new()
+	
 	Global.hud = self
 	Global.enable(mainMenu)
 	currHUD = mainMenu

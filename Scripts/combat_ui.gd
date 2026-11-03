@@ -28,7 +28,9 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 func initGUI() -> void:
-	hState = Global.hud.state
+	pcController = Global.hud.state.playerController
+	currentPC = Global.hud.state.focusedPlayer
+	#focusedNPC = currentPC.sel_target
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -13,6 +13,7 @@ signal enterState (state : controlState)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	Global.hud.state.playerController = self
 	pass # Replace with function body.
 
 func _changeState(newState: controlState) -> void:
