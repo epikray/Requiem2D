@@ -1,3 +1,4 @@
+class_name TimeManager
 extends Node
 
 @export var key : Key
@@ -12,7 +13,6 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	
 	if (Input.is_physical_key_pressed(key)):
 		Engine.time_scale = 0.5
 	else :

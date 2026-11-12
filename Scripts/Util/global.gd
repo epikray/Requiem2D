@@ -1,7 +1,7 @@
 extends Node
 
-
-
+var charDataServer : CharDataServer
+var timeManager : TimeManager
 
 var main : MainScene
 var hud : MainHud
@@ -16,7 +16,12 @@ var splayer : Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
+	add_child(CharDataServer.new(), true)
+	charDataServer = get_child(0);
+	charDataServer.name = "CharDataServer"
+	add_child(TimeManager.new(), true)
+	timeManager = get_child(1)
+	timeManager.name = "TimeManager"
 	pass
 
 # This is shit, a Player is whatever StageChar or FieldChar has a PCController

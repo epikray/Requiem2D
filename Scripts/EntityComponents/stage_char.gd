@@ -1,6 +1,8 @@
 class_name StageChar
 extends Node2D
 
+@export var entityName : String
+
 @export var controller : SCharController
 @export var view : CharView
 @export var dataRes: CharDataRes
@@ -19,7 +21,7 @@ func _ready() -> void:
 	if controller is SCharController_P:
 		Global.hud.state.focusedPlayer = self
 	
-	data = dataRes.get_instance()
+	data = Global.charDataServer.request(dataRes, entityName, self)
 	controller.cDefaultAction.connect(_handleCommand_DefaultAction)
 	controller.cSpecialAction.connect(_handleCommand_SpecialAction)
 	controller.cNavTarget.connect(_handleCommand_NavTarget)
@@ -33,6 +35,15 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
+	if (Input.is_physical_key_pressed(Key.KEY_P)):
+		print("Strength in data ", data.char_name, " : ", data.strength)
+		pass
+	if (Input.is_physical_key_pressed(Key.KEY_O)):
+		var rng = RandomNumberGenerator.new()
+		data.strength = floor(rng.randf()*100)
+		pass
+	
+	
 	if controller.i_dir.x > 0.5:
 		sel_target = enemy_team[0]
 	if controller.i_dir.x < -0.5:

@@ -1,12 +1,14 @@
 class_name FieldChar
 extends CharacterBody2D
 
+@export var entityName : String
+
 @export var controller : FCharController
 @export var view : CharView
 @export var dataRes: CharDataRes
 @export var stageRep: PackedScene
 
-@onready var data: CharData = dataRes.get_instance()
+var data: CharData
 ## TODO: this will be gathered from CharData
 @export var speed: float = 100
 
@@ -17,7 +19,7 @@ func create_stagerep() -> StageChar:
 	return rep
 
 func _enter_tree() -> void:
-	data = dataRes.get_instance()
+	data = Global.charDataServer.request(dataRes, entityName, self)
 	pass
 
 # Called when the node enters the scene tree for the first time.
@@ -29,6 +31,16 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
+	
+	
+	if (Input.is_physical_key_pressed(Key.KEY_P)):
+		print("Strength in data ", data.char_name, " : ", data.strength)
+		pass
+	if (Input.is_physical_key_pressed(Key.KEY_O)):
+		var rng = RandomNumberGenerator.new()
+		data.strength = floor(rng.randf()*100)
+		pass
+	
 	velocity = speed * controller.i_dir
 	# TODO: Anything to interact with within range
 	pass
