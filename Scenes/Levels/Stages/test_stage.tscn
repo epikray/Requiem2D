@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://dhvpiayxv0j8c" path="res://Assets/Backgrounds/a275.png" id="1_w0uf1"]
 [ext_resource type="PackedScene" uid="uid://bvajt0sg0nnab" path="res://Scenes/Common/camera_ctrl.tscn" id="3_15lgv"]
 [ext_resource type="Script" uid="uid://ewr8cdmc32qn" path="res://Scripts/Common/entityRegistry.gd" id="3_ghfga"]
-[ext_resource type="PackedScene" uid="uid://bgctmjw657jn3" path="res://Scenes/Common/time_modder.tscn" id="5_vq4ys"]
 
 [node name="TestStage" type="Node2D" unique_id=1586836765 node_paths=PackedStringArray("terrain", "entities", "camera")]
 script = ExtResource("1_rx61o")
@@ -29,6 +28,3 @@ position = Vector2(67, 31)
 enabled = false
 zoom = Vector2(3, 3)
 focusTarget = NodePath("../Background")
-
-[node name="TimeModder" parent="." unique_id=245912603 instance=ExtResource("5_vq4ys")]
-key = 4194325
