@@ -13,6 +13,7 @@ extends Control
 @export var enemyStatus : CharStatus
 
 var hState : MainHud.HudState
+var test_hero_ref
 
 var currentPC : StageChar
 var focusedNPC: StageChar
@@ -22,6 +23,7 @@ var state : cuiState
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	
 	state = cuiState.DEFAULT
 	quickSelector.visible = true
 	classicSelector.visible = false
@@ -35,7 +37,11 @@ func initGUI() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if test_hero_ref == null:
+		test_hero_ref = Global.charDataServer.requestRead("test_hero_1")
 	
+	playerStatus.setHP(test_hero_ref.health)
+	playerStatus.setSP(test_hero_ref.stamina)
 	
 	if (!pcController):
 		#printerr("No Player Stage Controller connected!")	

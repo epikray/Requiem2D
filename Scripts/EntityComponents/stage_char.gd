@@ -36,11 +36,11 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	if (Input.is_physical_key_pressed(Key.KEY_P)):
-		print("Strength in data ", data.char_name, " : ", data.strength)
+		print("stamina in data ", data.char_name, " : ", data.stamina)
 		pass
 	if (Input.is_physical_key_pressed(Key.KEY_O)):
 		var rng = RandomNumberGenerator.new()
-		data.strength = floor(rng.randf()*100)
+		data.stamina = floor(rng.randf()*100)
 		pass
 	
 	

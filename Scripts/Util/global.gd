@@ -1,5 +1,8 @@
 extends Node
 
+# Someplace to store constants would be great. Spamming them here seems annoying
+
+
 var charDataServer : CharDataServer
 var timeManager : TimeManager
 

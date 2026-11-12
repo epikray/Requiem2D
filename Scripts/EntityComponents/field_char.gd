@@ -34,11 +34,11 @@ func _process(_delta: float) -> void:
 	
 	
 	if (Input.is_physical_key_pressed(Key.KEY_P)):
-		print("Strength in data ", data.char_name, " : ", data.strength)
+		print("health in data ", data.char_name, " : ", data.health)
 		pass
 	if (Input.is_physical_key_pressed(Key.KEY_O)):
 		var rng = RandomNumberGenerator.new()
-		data.strength = floor(rng.randf()*100)
+		data.health = floor(rng.randf()*100)
 		pass
 	
 	velocity = speed * controller.i_dir

@@ -17,6 +17,12 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
+func requestRead(clientName: String) -> CharData:
+	if clientLookup.has(clientName):
+		return clientLookup[clientName].data
+	return null	
+	
+
 func request(data: CharDataRes, clientName: String, clientNode: Node) -> CharData:
 	if clientLookup.has(clientName):
 		var dataInstance = clientLookup[clientName]

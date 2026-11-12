@@ -8,6 +8,7 @@
 
 [node name="TestHeroS" type="Node2D" unique_id=1365503991 node_paths=PackedStringArray("controller", "view") groups=["NPCStageChars", "StageChars"]]
 script = ExtResource("1_b5xxd")
+entityName = "test_hero_1"
 controller = NodePath("SCharController_P")
 view = NodePath("CharView")
 dataRes = ExtResource("2_jugl4")
