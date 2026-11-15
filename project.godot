@@ -17,8 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Global="*uid://b42dhosicbq5h"
-GameState="*uid://nwmrp02kqbul"
+Global="*uid://dpob3qh7a06xo"
 
 [dotnet]
 

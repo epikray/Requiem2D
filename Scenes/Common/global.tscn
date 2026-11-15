@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dpob3qh7a06xo"]
+
+[ext_resource type="Script" uid="uid://b42dhosicbq5h" path="res://Scripts/Util/Global.gd" id="1_588hb"]
+[ext_resource type="Script" uid="uid://c1ywbgl8vuguq" path="res://Scripts/Common/CharDataServer.gd" id="2_ax2oc"]
+[ext_resource type="Script" uid="uid://bdrd8njirjntl" path="res://Scripts/Util/time_modder.gd" id="3_ikelf"]
+[ext_resource type="Script" uid="uid://bjv73uxhru4w1" path="res://Scripts/CombatService.gd" id="4_nb553"]
+[ext_resource type="PackedScene" uid="uid://c1hqqqlttlj1t" path="res://Scenes/GUI/screen_effect_service.tscn" id="5_raghe"]
+
+[node name="Global" type="Node" unique_id=357489192 node_paths=PackedStringArray("charDataServer", "timeManager", "combatService", "screenEffectService")]
+script = ExtResource("1_588hb")
+charDataServer = NodePath("CharDataServer")
+timeManager = NodePath("TimeModder")
+combatService = NodePath("CombatService")
+screenEffectService = NodePath("ScreenEffectService")
+
+[node name="CharDataServer" type="Node" parent="." unique_id=1458391048]
+script = ExtResource("2_ax2oc")
+metadata/_custom_type_script = "uid://c1ywbgl8vuguq"
+
+[node name="TimeModder" type="Node" parent="." unique_id=1058367939]
+script = ExtResource("3_ikelf")
+key = 4194325
+
+[node name="CombatService" type="Node" parent="." unique_id=1896845306]
+script = ExtResource("4_nb553")
+metadata/_custom_type_script = "uid://bjv73uxhru4w1"
+
+[node name="ScreenEffectService" parent="." unique_id=1588885799 instance=ExtResource("5_raghe")]

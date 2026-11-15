@@ -1,11 +1,10 @@
 extends Node
 
 # Someplace to store constants would be great. Spamming them here seems annoying
-
-
-var charDataServer : CharDataServer
-var timeManager : TimeManager
-var combatService : CombatService
+@export var charDataServer : CharDataServer
+@export var timeManager : TimeManager
+@export var combatService : CombatService
+@export var screenEffectService : ScreenEffectService
 
 var main : MainScene
 var hud : MainHud
@@ -20,15 +19,13 @@ var splayer : Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	add_child(CharDataServer.new(), true)
-	charDataServer = get_child(0);
-	charDataServer.name = "CharDataServer"
-	add_child(TimeManager.new(), true)
-	timeManager = get_child(1)
-	timeManager.name = "TimeManager"
-	add_child(CombatService.new(), true)
-	combatService = get_child(2)
-	combatService.name = "CombatService"
+	pass
+	
+func _process(delta: float) -> void:
+	if Input.is_physical_key_pressed(KEY_M):
+		screenEffectService.curtainUp()
+	if Input.is_physical_key_pressed(KEY_N):
+		screenEffectService.curtainDown()
 	pass
 
 # This is shit, a Player is whatever StageChar or FieldChar has a PCController

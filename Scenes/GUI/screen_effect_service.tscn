@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://c1hqqqlttlj1t"]
+
+[ext_resource type="Script" uid="uid://cmepwn4p65ty1" path="res://Scripts/ScreenEffectService.gd" id="1_16kh7"]
+[ext_resource type="Shader" uid="uid://bw8ha2jr4ryh3" path="res://Scenes/GUI/screen_effect_service.gdshader" id="1_q7g7h"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_khdr5"]
+shader = ExtResource("1_q7g7h")
+shader_parameter/cutoff = 0.0
+
+[sub_resource type="Animation" id="Animation_q7g7h"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_param/cutoff")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [null]
+}
+
+[sub_resource type="Animation" id="Animation_khdr5"]
+resource_name = "curtain_up"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:set_shader_paramarameter/cutoff")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [null, null]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e4nu8"]
+_data = {
+&"RESET": SubResource("Animation_q7g7h"),
+&"curtain_up": SubResource("Animation_khdr5")
+}
+
+[node name="ScreenEffectService" type="ColorRect" unique_id=1588885799]
+material = SubResource("ShaderMaterial_khdr5")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+script = ExtResource("1_16kh7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1711269747]
+libraries/ = SubResource("AnimationLibrary_e4nu8")
