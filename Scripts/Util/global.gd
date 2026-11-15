@@ -5,6 +5,7 @@ extends Node
 
 var charDataServer : CharDataServer
 var timeManager : TimeManager
+var combatService : CombatService
 
 var main : MainScene
 var hud : MainHud
@@ -25,6 +26,9 @@ func _ready():
 	add_child(TimeManager.new(), true)
 	timeManager = get_child(1)
 	timeManager.name = "TimeManager"
+	add_child(CombatService.new(), true)
+	combatService = get_child(2)
+	combatService.name = "CombatService"
 	pass
 
 # This is shit, a Player is whatever StageChar or FieldChar has a PCController

@@ -56,8 +56,8 @@ func _on_field_begin_battle(player_team: Array[StageChar], enemy_team: Array[Sta
 		enemy_char.my_team = Enemies
 		enemy_char.enemy_team = Playables
 	
-	Global.hud.state.players = Playables
-	Global.hud.state.enemies = Enemies
+	Global.hud.state.players = Playables # Del for CombatService.request 
+	Global.hud.state.enemies = Enemies # Del for CombatService.request
 	pass # Replace with function body.
 	
 func _resolve_battle_flee() -> void:

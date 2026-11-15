@@ -15,6 +15,17 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if Input.is_physical_key_pressed(Key.KEY_L):
+		# Check CharData users
+		for client in clientLookup:
+			var cd = clientLookup[client]
+			var cd_users = cd.data.char_name + ": "
+			for node in cd.users:
+				if node == null:
+					continue
+				cd_users += node.name + ", "
+			pass
+			print(cd_users)
 	pass
 
 func requestRead(clientName: String) -> CharData:
@@ -34,3 +45,8 @@ func request(data: CharDataRes, clientName: String, clientNode: Node) -> CharDat
 	dataInstance.users.append(clientNode)
 	clientLookup.set(clientName, dataInstance)
 	return dataInstance.data
+	
+func release(clientName: String, clientNode: Node) -> void:
+	if clientLookup.has(clientName):
+		clientLookup[clientName].users.erase(clientNode)
+	pass

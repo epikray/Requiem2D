@@ -8,6 +8,7 @@
 
 [node name="TestEnemyS" type="Node2D" unique_id=141915163 node_paths=PackedStringArray("controller", "view")]
 script = ExtResource("1_kn1mj")
+entityName = "test_slime"
 controller = NodePath("SCharController_NP")
 view = NodePath("CharView")
 dataRes = ExtResource("2_2ipo4")

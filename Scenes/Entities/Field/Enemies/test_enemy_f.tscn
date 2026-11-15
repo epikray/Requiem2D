@@ -17,6 +17,7 @@ radius = 54.0
 collision_layer = 2
 motion_mode = 1
 script = ExtResource("1_qwc5v")
+entityName = "test_slime"
 controller = NodePath("CharController_NP")
 view = NodePath("CharView")
 dataRes = ExtResource("2_27j7t")

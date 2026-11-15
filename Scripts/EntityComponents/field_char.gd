@@ -22,6 +22,10 @@ func _enter_tree() -> void:
 	data = Global.charDataServer.request(dataRes, entityName, self)
 	pass
 
+func _exit_tree() -> void:
+	Global.charDataServer.release(entityName, self)
+	pass
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	# TODO: Check that stageRep root is of type StageChar
@@ -54,14 +58,16 @@ func _physics_process(_delta: float) -> void:
 		print("%s wants to cancel something" % name)
 	pass
 
+
+
 func _sig_begin_battle(subject: FieldChar) -> void:
 	if !subject:
 		push_warning("%s signaled begin_battle without subject!" % subject.name)
 		return
 		
 	print("%s begin_battle with %s without a starting action" % [self.name, subject.name])
-	request_battle.emit(self, subject)
 	
+	request_battle.emit(self, subject)
 	pass
 	
 func _sig_begin_battle_first_action(subject: FieldChar) -> void:
